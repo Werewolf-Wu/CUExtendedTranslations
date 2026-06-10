@@ -10,22 +10,38 @@ from yaml import YAMLError, safe_load
 # Schema version needs update if you make breaking changes to yamls.
 EXPECTED_SCHEMA_VERSION = 19
 DATA_DIR = Path("data")
-logging.basicConfig(level=logging.INFO, handlers=[RichHandler()])
+logging.basicConfig(level=logging.INFO, format="%(message)s", handlers=[RichHandler()])
 logger = logging.getLogger(__name__)
-flag: bool = False
 
-for path in DATA_DIR.rglob("*.yaml"):
+
+def validate_file(path: Path) -> bool:
+    """Validate a yaml file."""
     try:
         with path.open() as f:
             data = safe_load(f)
+        if "schema_version" not in data:
+            logger.error("%s has no schema_version", path)
+            return False
         if data["schema_version"] != EXPECTED_SCHEMA_VERSION:
             logger.error("%s has incorrect schema_version", path)
-            flag = True
+            return False
     except YAMLError:
         logger.error("%s is not a valid YAML file", path, exc_info=False)
-        flag = True
+        return False
+    return True
 
-if flag:
-    sys.exit(1)
 
-logger.info("All YAML files are valid")
+def main() -> int:
+    """Perform validation on yaml files."""
+    failed_paths = [
+        path for path in DATA_DIR.rglob("*.yaml") if not validate_file(path)
+    ]
+
+    if not failed_paths:
+        logger.info("All YAML files are valid")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
