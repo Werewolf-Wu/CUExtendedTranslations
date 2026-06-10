@@ -1,0 +1,1133 @@
+schema_version: 19
+sources:
+  main.12gauge:
+    - craft
+  main.556round:
+    - craft
+  main.9mmround:
+    - craft
+  main.adhesivebandage:
+    - break_building
+    - trader
+  main.aed:
+    - break_building
+    - trader
+    - escape_pod
+  main.alcohol:
+    - break_building
+    - trader
+  main.alginate:
+    - break_building
+    - trader
+  main.amiodarone:
+    - break_building
+    - trader
+  main.analgesicgauze:
+    - break_building
+    - trader
+  main.animalflesh:
+    - break_building
+    - trader
+  main.antibiotics:
+    - break_building
+    - trader
+  main.antidepressants:
+    - break_building
+    - trader
+  main.antirad:
+    - break_building
+    - trader
+    - worldgen
+  main.antisepticmush:
+    - craft
+    - trader
+  main.antiserum:
+    - break_building
+    - trader
+  main.applejuice:
+    - break_building
+    - trader
+  main.aquapple:
+    - break_building
+  main.armwarmers:
+    - break_building
+    - trader
+  main.autoinjector:
+    - craft
+    - trader
+  main.autopump:
+    - break_building
+    - trader
+  main.autozoomgoggles:
+    - break_building
+    - trader
+  main.balaclava:
+    - break_building
+    - trader
+  main.banana:
+    - break_building
+    - trader
+  main.bandage:
+    - craft
+    - break_building
+    - trader
+    - worldgen
+  main.bandolier:
+    - break_building
+    - trader
+  main.bellyarmor:
+    - break_building
+    - trader
+  main.belt:
+    - craft
+    - break_building
+    - trader
+  main.bigpack:
+    - craft
+    - break_building
+    - trader
+  main.bikehelmet:
+    - craft
+    - break_building
+    - trader
+  main.bleach:
+    - break_building
+    - trader
+  main.blindfold:
+    - break_building
+    - trader
+  main.blobflesh:
+    - break_building
+    - trader
+  main.bloodbag:
+    - craft
+    - break_building
+    - trader
+  main.bloodbaghuman:
+    - break_building
+    - trader
+  main.bloodcoagulant:
+    - break_building
+    - trader
+  main.bloodcrystalshard:
+    - break_building
+    - trader
+  main.bloodsac:
+    - break_building
+    - trader
+  main.blueprint:
+    - break_building
+    - trader
+  main.boneweldingtool:
+    - craft
+    - break_building
+    - trader
+  main.bowlofcereal:
+    - craft
+    - trader
+  main.box:
+    - break_building
+    - trader
+  main.boxof12gauge:
+    - craft
+    - trader
+    - weapon_trader
+  main.braingrow:
+    - break_building
+    - trader
+  main.bread:
+    - craft
+    - break_building
+    - trader
+  main.brokenbag:
+    - break_building
+    - trader
+  main.browncap:
+    - break_building
+    - trader
+  main.bruisekit:
+    - craft
+    - break_building
+    - trader
+  main.bucketofchicken:
+    - break_building
+    - trader
+  main.bucketofnochicken:
+    - trader
+    - item_use
+  main.bulbskin:
+    - break_building
+    - trader
+  main.bunchunk:
+    - break_building
+    - trader
+  main.bundleofwires:
+    - craft
+    - trader
+  main.burger:
+    - craft
+    - break_building
+    - trader
+  main.cactusflesh:
+    - break_building
+    - trader
+  main.cake:
+    - break_building
+    - trader
+  main.campfire:
+    - craft
+  main.candybar:
+    - break_building
+    - trader
+  main.canteen:
+    - craft
+  main.canvas:
+    - craft
+    - trader
+  main.carapace:
+    - break_building
+    - trader
+  main.carcass:
+    - break_building
+    - trader
+  main.carcasssplint:
+    - craft
+    - trader
+  main.casing:
+    - craft
+  main.ceftriaxone:
+    - break_building
+    - trader
+  main.cereal:
+    - break_building
+    - trader
+  main.charcoal:
+    - craft
+    - trader
+  main.chestdrain:
+    - craft
+    - break_building
+    - trader
+  main.chips:
+    - break_building
+    - trader
+  main.chocolatebar:
+    - break_building
+    - trader
+  main.chocolatemilk:
+    - break_building
+    - trader
+  main.circuitboard:
+    - craft
+    - break_building
+  main.claws:
+    - break_building
+    - trader
+  main.climbingclaws:
+    - break_building
+    - trader
+  main.climbingrope:
+    - craft
+    - break_building
+    - trader
+  main.clottingmush:
+    - craft
+    - break_building
+    - trader
+  main.coffee:
+    - break_building
+    - trader
+  main.combatpen:
+    - break_building
+    - trader
+  main.cookies:
+    - break_building
+    - trader
+  main.craftingbottle:
+    - temporary_during_liquid_crafting
+    - item_use
+  main.crudecleaver:
+    - craft
+    - break_building
+    - trader
+  main.digestioncrystalshard:
+    - break_building
+    - trader
+  main.disinfectant:
+    - break_building
+    - trader
+  main.dogfood:
+    - break_building
+    - trader
+    - starter_supply
+  main.drillrepairkit:
+    - craft
+    - trader
+  main.droppings:
+    - worldgen
+  main.dryfoliage:
+    - break_building
+  main.duffelbag:
+    - craft
+    - break_building
+    - trader
+  main.dustmask:
+    - break_building
+    - trader
+  main.dynamite:
+    - craft
+    - break_building
+    - trader
+  main.emergencylight:
+    - break_building
+    - trader
+    - starter_supply
+  main.emissivecrystalshard:
+    - break_building
+    - trader
+  main.energydrink:
+    - break_building
+    - trader
+  main.epda:
+    - trader
+    - escape_pod
+  main.experimentflesh:
+    - break_building
+    - trader
+  main.exposedcore:
+    - break_building
+  main.fannypack:
+    - break_building
+    - trader
+  main.fentanyl:
+    - break_building
+    - trader
+  main.filterstraw:
+    - break_building
+    - trader
+  main.firestarter:
+    - craft
+    - trader
+  main.flammablepowder:
+    - craft
+  main.flashlight:
+    - craft
+    - break_building
+    - trader
+  main.fleshchunk:
+    - break_building
+    - trader
+    - worldgen
+  main.flexiglass:
+    - craft
+    - trader
+  main.flimsyknife:
+    - craft
+  main.foliage:
+    - craft
+    - break_building
+  main.foliagebag:
+    - craft
+    - trader
+  main.foliagemeal:
+    - craft
+    - break_building
+    - trader
+  main.frigiantfruit:
+    - break_building
+    - trader
+  main.funguschunk:
+    - break_building
+    - trader
+  main.geigercounter:
+    - craft
+    - break_building
+    - trader
+  main.geofruit:
+    - break_building
+    - trader
+  main.glowplantfruit:
+    - break_building
+    - trader
+  main.grapplinghook:
+    - break_building
+    - trader
+  main.gravbag:
+    - break_building
+    - trader
+  main.handcrank:
+    - craft
+    - break_building
+    - trader
+  main.hardcandy:
+    - break_building
+    - trader
+  main.headlamp:
+    - craft
+    - break_building
+    - trader
+  main.heavydrill:
+    - break_building
+    - trader
+  main.helluce:
+    - break_building
+    - trader
+  main.heroin:
+    - break_building
+    - trader
+  main.holidayhat:
+    - break_building
+    - trader
+    - item_use
+  main.hoodie:
+    - break_building
+    - trader
+  main.icepack:
+    - craft
+    - break_building
+    - trader
+  main.icetea:
+    - break_building
+    - trader
+  main.ilmenitechunk:
+    - trader
+    - block_break
+  main.internalorgans:
+    - break_building
+    - trader
+  main.jetpack:
+    - break_building
+    - trader
+  main.keratinbooster:
+    - break_building
+    - trader
+  main.ketchup:
+    - break_building
+    - trader
+  main.kneepads:
+    - break_building
+    - trader
+  main.lantern:
+    - craft
+    - break_building
+    - trader
+    - starter_supply
+  main.largebattery:
+    - craft
+    - break_building
+    - trader
+  main.largecarcass:
+    - craft
+    - break_building
+    - trader
+  main.latexgloves:
+    - break_building
+    - trader
+  main.lcdscreen:
+    - craft
+    - trader
+  main.legpouch:
+    - break_building
+    - trader
+  main.lemonade:
+    - break_building
+    - trader
+  main.lightbulb:
+    - craft
+    - break_building
+    - trader
+  main.lighter:
+    - break_building
+    - trader
+  main.limbwraps:
+    - craft
+    - break_building
+    - trader
+  main.liquidcentrifuge:
+    - break_building
+    - trader
+  main.liquidpouch:
+    - break_building
+    - trader
+  main.lockpickingkit:
+    - craft
+    - break_building
+    - trader
+  main.lrd:
+    - craft
+    - break_building
+    - trader
+  main.machete:
+    - craft
+    - break_building
+    - trader
+  main.magazinebase:
+    - craft
+    - trader
+  main.makeshiftdiggingtool:
+    - craft
+    - trader
+  main.makeshiftheadlamp:
+    - craft
+    - trader
+  main.makeshifthelmet:
+    - craft
+    - trader
+  main.makeshiftlrd:
+    - craft
+    - break_building
+    - trader
+  main.makeshiftrifle:
+    - craft
+    - trader
+  main.makeshiftwrench:
+    - craft
+    - break_building
+    - trader
+  main.manualdefibrillator:
+    - break_building
+    - trader
+    - escape_pod
+  main.materialpouch:
+    - craft
+    - break_building
+    - trader
+  main.medicalsuture:
+    - break_building
+    - trader
+  main.mediumbattery:
+    - craft
+    - break_building
+    - trader
+  main.medkit:
+    - break_building
+    - trader
+  main.milk:
+    - break_building
+    - trader
+  main.mindwipe:
+    - break_building
+    - trader
+  main.minilaserdrill:
+    - craft
+    - break_building
+    - trader
+  main.morphine:
+    - break_building
+    - trader
+  main.mp3player:
+    - break_building
+    - trader
+    - item_use
+  main.musharm:
+    - break_building
+    - trader
+  main.mushpear:
+    - break_building
+    - trader
+  main.mushtail:
+    - break_building
+    - trader
+  main.nails:
+    - craft
+  main.naloxone:
+    - break_building
+    - trader
+  main.naltrexone:
+    - break_building
+    - trader
+  main.neuralbooster:
+    - craft
+    - trader
+  main.nondescriptcan:
+    - break_building
+    - trader
+  main.nopopcorn:
+    - trader
+    - item_use
+  main.nutrientbar:
+    - craft
+    - break_building
+    - trader
+  main.opium:
+    - break_building
+    - trader
+  main.oxygencrystalshard:
+    - break_building
+    - trader
+  main.paincream:
+    - break_building
+    - trader
+  main.painkillers:
+    - break_building
+    - trader
+  main.pancake:
+    - craft
+    - break_building
+    - trader
+  main.paprikash:
+    - break_building
+    - trader
+  main.pemmican:
+    - craft
+    - break_building
+    - trader
+  main.pickaxe:
+    - craft
+    - break_building
+    - trader
+  main.pistol:
+    - break_building
+    - trader
+    - weapon_trader
+  main.pitchfork:
+    - break_building
+    - trader
+  main.pizzaslice:
+    - break_building
+    - trader
+  main.plasmacutter:
+    - break_building
+    - trader
+  main.plasticbag:
+    - break_building
+    - trader
+  main.plasticbandage:
+    - craft
+    - break_building
+    - trader
+  main.plasticchunk:
+    - break_building
+    - block_break
+  main.plushie:
+    - break_building
+    - trader
+    - item_use
+  main.popcorn:
+    - break_building
+    - trader
+  main.popfruit:
+    - break_building
+    - trader
+  main.pouch:
+    - break_building
+    - trader
+  main.present:
+    - trader
+    - seasonal_event
+  main.primitivediggingtool:
+    - break_building
+    - trader
+  main.processedcopper:
+    - craft
+    - trader
+  main.purse:
+    - break_building
+    - trader
+  main.rag:
+    - break_building
+    - trader
+    - worldgen
+  main.rake:
+    - break_building
+    - trader
+  main.rangefinder:
+    - break_building
+    - trader
+  main.rawcopper:
+    - trader
+    - block_break
+  main.reliefcrystalshard:
+    - break_building
+    - trader
+  main.rifle:
+    - break_building
+    - trader
+    - weapon_trader
+  main.riflemagazine:
+    - craft
+    - trader
+    - weapon_trader
+  main.ringersolution:
+    - break_building
+    - trader
+  main.riothelmet:
+    - craft
+    - trader
+  main.rippeddressing:
+    - craft
+    - break_building
+    - trader
+  main.rope:
+    - craft
+  main.roselight:
+    - trader
+    - item_use
+  main.rosepod:
+    - break_building
+    - trader
+  main.ryebulb:
+    - break_building
+  main.ryeflour:
+    - craft
+    - trader
+  main.safetyglasses:
+    - break_building
+    - trader
+  main.saline:
+    - craft
+    - break_building
+    - trader
+  main.scaffoldingpack:
+    - craft
+    - break_building
+    - trader
+  main.scarf:
+    - craft
+    - break_building
+    - trader
+  main.scrapcube:
+    - craft
+    - trader
+  main.scrapmetal:
+    - break_building
+    - block_break
+  main.scrappanel:
+    - craft
+    - trader
+  main.scraptube:
+    - craft
+    - trader
+  main.scubadivinggear:
+    - craft
+    - break_building
+    - trader
+  main.shotgun:
+    - break_building
+    - trader
+    - weapon_trader
+  main.shovel:
+    - break_building
+    - trader
+  main.sickle:
+    - break_building
+    - trader
+  main.sledgehammer:
+    - break_building
+    - trader
+  main.sleepingbag:
+    - break_building
+    - trader
+  main.sleepingpills:
+    - break_building
+  main.slingbag:
+    - craft
+    - trader
+  main.smallbattery:
+    - craft
+    - break_building
+    - trader
+  main.smallmagazine:
+    - craft
+    - trader
+    - weapon_trader
+  main.smallpack:
+    - break_building
+    - trader
+  main.sneakers:
+    - break_building
+    - trader
+  main.sodabottle:
+    - break_building
+    - trader
+  main.sodacan:
+    - break_building
+    - trader
+  main.sodiumnitroprusside:
+    - break_building
+    - trader
+  main.soothingcrystalshard:
+    - break_building
+    - trader
+  main.soup:
+    - break_building
+    - trader
+  main.spacedrain:
+    - break_building
+    - trader
+  main.splint:
+    - craft
+    - break_building
+    - trader
+  main.spraybottle:
+    - craft
+    - trader
+  main.steak:
+    - break_building
+    - trader
+    - item_use
+  main.sterilizedbandage:
+    - craft
+    - break_building
+    - trader
+  main.stick:
+    - craft
+    - trader
+    - block_break
+  main.stonefruitclosed:
+    - break_building
+    - trader
+  main.stonefruitopen:
+    - trader
+    - item_use
+  main.streptokinase:
+    - break_building
+    - trader
+  main.striderpelt:
+    - break_building
+    - trader
+  main.string:
+    - craft
+  main.syringe:
+    - craft
+    - trader
+  main.tacticalboots:
+    - craft
+    - trader
+  main.tacticalgloves:
+    - craft
+    - trader
+  main.terrainscanner:
+    - craft
+    - break_building
+    - trader
+  main.titaniummachete:
+    - craft
+    - trader
+  main.titaniummultitool:
+    - craft
+    - trader
+  main.titaniumpickaxe:
+    - craft
+    - trader
+  main.titaniumrod:
+    - craft
+    - trader
+  main.titaniumsheet:
+    - craft
+    - trader
+  main.titaniumslab:
+    - craft
+    - trader
+  main.toolbox:
+    - break_building
+    - trader
+  main.torch:
+    - craft
+    - break_building
+    - trader
+  main.tornshirt:
+    - break_building
+    - trader
+  main.tourniquet:
+    - craft
+    - break_building
+    - trader
+  main.trashbag:
+    - break_building
+    - trader
+    - starter_supply
+  main.traumarig:
+    - craft
+    - trader
+  main.trowel:
+    - break_building
+    - trader
+  main.turbulentcrystalshard:
+    - break_building
+    - trader
+  main.tweezers:
+    - craft
+    - break_building
+    - trader
+  main.vasopressin:
+    - break_building
+    - trader
+  main.venomgland:
+    - break_building
+    - trader
+  main.watch:
+    - break_building
+    - trader
+  main.waterbottle:
+    - break_building
+    - trader
+    - starter_supply
+  main.waterjug:
+    - break_building
+    - trader
+  main.woodcube:
+    - craft
+    - trader
+  main.wooddiggingtool:
+    - break_building
+    - trader
+  main.woodpanel:
+    - craft
+    - block_break
+  main.woodpickaxe:
+    - break_building
+    - trader
+  main.woodpitchfork:
+    - break_building
+    - trader
+  main.woodsandals:
+    - craft
+    - trader
+  main.woodscraps:
+    - craft
+    - block_break
+  main.woodshovel:
+    - break_building
+    - trader
+  main.woodsickle:
+    - break_building
+    - trader
+  main.woodtrowel:
+    - break_building
+    - trader
+  main.woundglue:
+    - break_building
+    - trader
+  main.wrench:
+    - craft
+    - break_building
+    - trader
+  main.xalorissponge:
+    - break_building
+    - trader
+  other.alcohol:
+    - container_initial
+    - mini_barrel
+  other.algae:
+    - mini_barrel
+    - natural_liquid
+  other.alienblood:
+    - craft
+    - mini_barrel
+  other.amiodarone:
+    - container_initial
+    - mini_barrel
+  other.antibiotics:
+    - container_initial
+    - mini_barrel
+  other.antidepressants:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.antirad:
+    - container_initial
+    - mini_barrel
+  other.antiserum:
+    - container_initial
+    - mini_barrel
+  other.antivenom:
+    - craft
+    - mini_barrel
+  other.applejuice:
+    - container_initial
+    - mini_barrel
+  other.biochem:
+    - craft
+    - mini_barrel
+  other.bleach:
+    - container_initial
+    - mini_barrel
+  other.blood:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.braingrow:
+    - container_initial
+    - mini_barrel
+  other.carbonatedwater:
+    - mini_barrel
+  other.ceftriaxone:
+    - container_initial
+    - mini_barrel
+  other.cereal:
+    - container_initial
+    - mini_barrel
+  other.chloroform:
+    - mini_barrel
+  other.chocolatemilk:
+    - container_initial
+    - mini_barrel
+  other.cleanwater:
+    - craft
+    - container_initial
+    - mini_barrel
+    - natural_liquid
+  other.coffee:
+    - container_initial
+    - mini_barrel
+  other.dirtywater:
+    - mini_barrel
+    - natural_liquid
+  other.disinfectant:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.energydrink:
+    - container_initial
+    - mini_barrel
+  other.epinephrine:
+    - container_initial
+    - mini_barrel
+  other.fat:
+    - craft
+    - mini_barrel
+  other.fentanyl:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.groundwater:
+    - mini_barrel
+    - natural_liquid
+  other.heroin:
+    - container_initial
+    - mini_barrel
+  other.highgradestimulant:
+    - container_initial
+    - mini_barrel
+  other.hotsauce:
+    - mini_barrel
+  other.icecream:
+    - mini_barrel
+  other.icedtea:
+    - container_initial
+    - mini_barrel
+  other.keratinbooster:
+    - container_initial
+    - mini_barrel
+  other.ketchup:
+    - container_initial
+    - mini_barrel
+  other.lemonade:
+    - container_initial
+    - mini_barrel
+  other.lowgradestimulant:
+    - mini_barrel
+  other.lrdserum:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.mercury:
+    - mini_barrel
+  other.midgradestimulant:
+    - mini_barrel
+  other.milk:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.mindwipe:
+    - container_initial
+    - mini_barrel
+  other.mold:
+    - mini_barrel
+  other.morphine:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.naloxone:
+    - container_initial
+    - mini_barrel
+  other.naltrexone:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.oil:
+    - mini_barrel
+    - natural_liquid
+  other.oliveoil:
+    - mini_barrel
+  other.opium:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.orangejuice:
+    - mini_barrel
+  other.oxyline:
+    - container_initial
+    - mini_barrel
+  other.painkillers:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.powderedmilk:
+    - mini_barrel
+  other.procoagulant:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.producejuice:
+    - craft
+    - mini_barrel
+  other.radwater:
+    - mini_barrel
+  other.redblood:
+    - container_initial
+    - mini_barrel
+  other.refinedjuice:
+    - craft
+    - mini_barrel
+  other.reliefcream:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.ringersolution:
+    - container_initial
+    - mini_barrel
+  other.saline:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.sap:
+    - mini_barrel
+    - natural_liquid
+  other.sleepingpills:
+    - container_initial
+    - mini_barrel
+  other.soap:
+    - craft
+    - mini_barrel
+  other.soda:
+    - container_initial
+    - mini_barrel
+  other.sodiumnitroprusside:
+    - container_initial
+    - mini_barrel
+  other.soup:
+    - craft
+    - container_initial
+    - mini_barrel
+  other.sportsdrink:
+    - mini_barrel
+  other.streptokinase:
+    - container_initial
+    - mini_barrel
+  other.urine:
+    - mini_barrel
+  other.vasopressin:
+    - container_initial
+    - mini_barrel
+  other.water:
+    - craft
+    - container_initial
+    - mini_barrel
+    - natural_liquid
+  other.woundglue:
+    - container_initial
+    - mini_barrel
+  other.yogurt:
+    - mini_barrel

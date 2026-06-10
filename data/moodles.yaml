@@ -1,0 +1,907 @@
+schema_version: 19
+# gt  - Greater than
+# gte - Greater than or equal
+# lt  - Less than
+# lte - Less than or equal
+# eq  - Equal
+moodles:
+  moodles.focused:
+    conditions:
+      focus:
+        gt: 0
+        unit: percent
+  moodles.impendingdoom:
+    conditions:
+      focus:
+        lte: 0
+        unit: percent
+      fear:
+        gt: 0
+        lte: 50
+        unit: percent
+  moodles.horrified:
+    conditions:
+      focus:
+        lte: 0
+        unit: percent
+      fear:
+        gt: 50
+        unit: percent
+  moodles.tachycardia:
+    conditions:
+      heart_rate:
+        gt: 110
+  moodles.bradycardia:
+    conditions:
+      heart_rate:
+        lt: 60
+  moodles.palpitations:
+    conditions:
+      heart_rate:
+        gt: 240
+  moodles.laststand:
+    conditions:
+      last_stand:
+        gt: 0
+  moodles.braindamage4:
+    conditions:
+      brain_health:
+        lt: 30
+        unit: percent
+  moodles.braindamage3:
+    conditions:
+      brain_health:
+        gte: 30
+        lt: 60
+        unit: percent
+  moodles.braindamage2:
+    conditions:
+      brain_health:
+        gte: 60
+        lt: 80
+        unit: percent
+  moodles.braindamage1:
+    conditions:
+      brain_health:
+        gte: 80
+        lt: 95
+        unit: percent
+  moodles.stroke:
+    conditions:
+      stroke:
+        gt: 70
+        unit: percent
+  moodles.cardiacarrest:
+    conditions:
+      cardiac_arrest:
+        is: true
+  moodles.fibrillation3:
+    conditions:
+      fibrillation:
+        gt: 75
+        unit: percent
+  moodles.fibrillation2:
+    conditions:
+      fibrillation:
+        gt: 50
+        lte: 75
+        unit: percent
+  moodles.fibrillation1:
+    conditions:
+      fibrillation:
+        gt: 15
+        lte: 50
+        unit: percent
+  moodles.hypotension4:
+    conditions:
+      blood_pressure:
+        lt: 60
+  moodles.hypotension3:
+    conditions:
+      blood_pressure:
+        gte: 60
+        lt: 83
+  moodles.hypotension2:
+    conditions:
+      blood_pressure:
+        gte: 83
+        lt: 96
+  moodles.hypotension1:
+    conditions:
+      blood_pressure:
+        gte: 96
+        lt: 110
+  moodles.hypertension4:
+    conditions:
+      blood_pressure:
+        gt: 180
+  moodles.hypertension3:
+    conditions:
+      blood_pressure:
+        gt: 162
+        lte: 180
+  moodles.hypertension2:
+    conditions:
+      blood_pressure:
+        gt: 145
+        lte: 162
+  moodles.hypertension1:
+    conditions:
+      blood_pressure:
+        gt: 130
+        lte: 145
+  moodles.cantbreathe:
+    conditions:
+      breathing:
+        is: false
+  moodles.hypoventilation2:
+    conditions:
+      breathing:
+        lt: 50
+        unit: percent
+  moodles.hypoventilation1:
+    conditions:
+      breathing:
+        gte: 50
+        lt: 90
+        unit: percent
+  moodles.thoraxdestroyed:
+    conditions:
+      thorax_muscle:
+        lt: 4
+  moodles.hemothorax:
+    conditions:
+      hemothorax:
+        gt: 40
+        unit: percent
+  moodles.pulmonaryembolism:
+    conditions:
+      pulmonary_embolism:
+        is: true
+  moodles.oxygen4:
+    conditions:
+      blood_oxygen:
+        lt: 45
+        unit: percent
+  moodles.oxygen3:
+    conditions:
+      blood_oxygen:
+        gte: 45
+        lt: 60
+        unit: percent
+  moodles.oxygen2:
+    conditions:
+      blood_oxygen:
+        gte: 60
+        lt: 75
+        unit: percent
+  moodles.oxygen1:
+    conditions:
+      blood_oxygen:
+        gte: 75
+        lt: 90
+        unit: percent
+  moodles.irradiated4:
+    conditions:
+      radiation_sickness:
+        gt: 80
+        unit: percent
+  moodles.irradiated3:
+    conditions:
+      radiation_sickness:
+        gt: 50
+        lte: 80
+        unit: percent
+  moodles.irradiated2:
+    conditions:
+      radiation_sickness:
+        gt: 30
+        lte: 50
+        unit: percent
+  moodles.irradiated1:
+    conditions:
+      radiation_sickness:
+        gt: 10
+        lte: 30
+        unit: percent
+  moodles.pain4:
+    conditions:
+      pain:
+        gt: 80
+        unit: percent
+  moodles.pain3:
+    conditions:
+      pain:
+        gt: 55
+        lte: 80
+        unit: percent
+  moodles.pain2:
+    conditions:
+      pain:
+        gt: 30
+        lte: 55
+        unit: percent
+  moodles.pain1:
+    conditions:
+      pain:
+        gt: 10
+        lte: 30
+        unit: percent
+  moodles.shock:
+    conditions:
+      pain_shock:
+        gt: 0.3
+  moodles.overdose4:
+    conditions:
+      opioids:
+        gt: 80
+        unit: percent
+  moodles.overdose3:
+    conditions:
+      opioids:
+        gt: 50
+        lte: 80
+        unit: percent
+  moodles.overdose2:
+    conditions:
+      opioids:
+        gt: 20
+        lte: 50
+        unit: percent
+  moodles.overdose1:
+    conditions:
+      opioids:
+        gt: 5
+        lte: 20
+        unit: percent
+  moodles.withdrawal4:
+    conditions:
+      opioids:
+        lt: -34
+        unit: percent
+  moodles.withdrawal3:
+    conditions:
+      opioids:
+        gte: -34
+        lt: -25
+        unit: percent
+  moodles.withdrawal2:
+    conditions:
+      opioids:
+        gte: -25
+        lt: -15
+        unit: percent
+  moodles.withdrawal1:
+    conditions:
+      opioids:
+        gte: -15
+        lt: -5
+        unit: percent
+  moodles.stimulated:
+    conditions:
+      stimulants:
+        gt: 0
+  moodles.concussion:
+    conditions:
+      head_muscle:
+        lt: 14.4
+  moodles.unconscious:
+    conditions:
+      head_muscle:
+        gte: 14.4
+      consciousness:
+        lte: 20
+        unit: percent
+  moodles.asleep:
+    conditions:
+      head_muscle:
+        gte: 14.4
+      consciousness:
+        lte: 20
+        unit: percent
+  moodles.incapacitated:
+    conditions:
+      head_muscle:
+        gte: 14.4
+      consciousness:
+        gt: 20
+        lt: 30
+        unit: percent
+  moodles.confused3:
+    conditions:
+      head_muscle:
+        gte: 14.4
+      consciousness:
+        gte: 30
+        lt: 55
+        unit: percent
+  moodles.confused2:
+    conditions:
+      head_muscle:
+        gte: 14.4
+      consciousness:
+        gte: 55
+        lt: 72
+        unit: percent
+  moodles.confused1:
+    conditions:
+      head_muscle:
+        gte: 14.4
+      consciousness:
+        gte: 72
+        lt: 90
+        unit: percent
+  moodles.drugoverdose:
+    conditions:
+      drug_overdose:
+        gt: 0
+  moodles.internalBleed:
+    conditions:
+      internal_bleeding:
+        gt: 5
+  moodles.bleeding4:
+    conditions:
+      bleeding:
+        gt: 0.45
+        unit: liter_per_minute
+  moodles.bleeding3:
+    conditions:
+      bleeding:
+        gt: 0.23
+        lte: 0.45
+        unit: liter_per_minute
+  moodles.bleeding2:
+    conditions:
+      bleeding:
+        gt: 0.09
+        lte: 0.23
+        unit: liter_per_minute
+  moodles.bleeding1:
+    conditions:
+      bleeding:
+        gt: 0
+        lte: 0.09
+        unit: liter_per_minute
+  moodles.exertion4:
+    conditions:
+      stamina:
+        lte: 15
+        unit: percent
+  moodles.exertion3:
+    conditions:
+      stamina:
+        gt: 15
+        lt: 35
+        unit: percent
+  moodles.exertion2:
+    conditions:
+      stamina:
+        gte: 35
+        lt: 50
+        unit: percent
+  moodles.exertion1:
+    conditions:
+      stamina:
+        gte: 50
+        lt: 70
+        unit: percent
+  moodles.brokenbone:
+    conditions:
+      fracture_timer:
+        gt: 0
+  moodles.dislocation:
+    conditions:
+      dislocation_timer:
+        gt: 0
+  moodles.brokenneck:
+    conditions:
+      limb:
+        index: 0
+        broken: true
+      bone_heal_timer:
+        gt: 0
+  moodles.brokenribs:
+    conditions:
+      limb:
+        index: 1
+        broken: true
+      bone_heal_timer:
+        gt: 0
+  moodles.dislocatedjaw:
+    conditions:
+      limb:
+        index: 0
+        dislocated: true
+      dislocation_timer:
+        gt: 0
+  moodles.dislocatedspine:
+    conditions:
+      limb:
+        index: 1
+        dislocated: true
+      dislocation_timer:
+        gt: 0
+  moodles.infected4:
+    conditions:
+      limb_infection:
+        gt: 80
+        unit: percent
+  moodles.infected3:
+    conditions:
+      limb_infection:
+        gt: 60
+        lte: 80
+        unit: percent
+  moodles.infected2:
+    conditions:
+      limb_infection:
+        gt: 40
+        lte: 60
+        unit: percent
+  moodles.infected1:
+    conditions:
+      limb_infection:
+        lte: 40
+        unit: percent
+  moodles.sepsis3:
+    conditions:
+      sepsis:
+        gt: 80
+        unit: percent
+  moodles.sepsis2:
+    conditions:
+      sepsis:
+        gt: 50
+        lte: 80
+        unit: percent
+  moodles.sepsis1:
+    conditions:
+      sepsis:
+        gt: 10
+        lte: 50
+        unit: percent
+  moodles.venom4:
+    conditions:
+      toxin:
+        gt: 90
+        unit: percent
+  moodles.venom3:
+    conditions:
+      toxin:
+        gt: 55
+        lte: 90
+        unit: percent
+  moodles.venom2:
+    conditions:
+      toxin:
+        gt: 25
+        lte: 55
+        unit: percent
+  moodles.venom1:
+    conditions:
+      toxin:
+        gt: 2
+        lte: 25
+        unit: percent
+  moodles.tired4:
+    conditions:
+      energy:
+        lte: 7
+        unit: percent
+  moodles.tired3:
+    conditions:
+      energy:
+        gt: 7
+        lt: 15
+        unit: percent
+  moodles.tired2:
+    conditions:
+      energy:
+        gte: 15
+        lt: 25
+        unit: percent
+  moodles.tired1:
+    conditions:
+      energy:
+        gte: 25
+        lt: 35
+        unit: percent
+  moodles.hunger4:
+    conditions:
+      hunger:
+        lte:
+          formula: 15 * clamp01(1 + mood * 0.009)
+        unit: percent
+  moodles.hunger3:
+    conditions:
+      hunger:
+        lt:
+          formula: 35 * clamp01(1 + mood * 0.009)
+        gt:
+          formula: 15 * clamp01(1 + mood * 0.009)
+        unit: percent
+  moodles.hunger2:
+    conditions:
+      hunger:
+        lt:
+          formula: 50 * clamp01(1 + mood * 0.009)
+        gte:
+          formula: 35 * clamp01(1 + mood * 0.009)
+        unit: percent
+  moodles.hunger1:
+    conditions:
+      hunger:
+        lt:
+          formula: 75 * clamp01(1 + mood * 0.009)
+        gte:
+          formula: 50 * clamp01(1 + mood * 0.009)
+        unit: percent
+  moodles.hunger6:
+    conditions:
+      hunger:
+        gt: 120
+        unit: percent
+  moodles.hunger5:
+    conditions:
+      hunger:
+        gt: 100
+        lte: 120
+        unit: percent
+  moodles.thirst4:
+    conditions:
+      thirst:
+        lte: 20
+        unit: percent
+  moodles.thirst3:
+    conditions:
+      thirst:
+        gt: 20
+        lt: 35
+        unit: percent
+  moodles.thirst2:
+    conditions:
+      thirst:
+        gte: 35
+        lt: 55
+        unit: percent
+  moodles.thirst1:
+    conditions:
+      thirst:
+        gte: 55
+        lt: 75
+        unit: percent
+  moodles.overhydrated3:
+    conditions:
+      thirst:
+        gt: 175
+        unit: percent
+  moodles.overhydrated2:
+    conditions:
+      thirst:
+        gt: 125
+        lte: 175
+        unit: percent
+  moodles.overhydrated1:
+    conditions:
+      thirst:
+        gt: 100
+        lte: 125
+        unit: percent
+  moodles.sick4:
+    conditions:
+      sickness:
+        gt: 75
+        unit: percent
+  moodles.sick3:
+    conditions:
+      sickness:
+        gt: 50
+        lte: 75
+        unit: percent
+  moodles.sick2:
+    conditions:
+      sickness:
+        gt: 30
+        lte: 50
+        unit: percent
+  moodles.sick1:
+    conditions:
+      sickness:
+        gt: 10
+        lte: 30
+        unit: percent
+  moodles.hot4:
+    conditions:
+      body_temperature:
+        gt: 41.5
+        unit: celsius
+  moodles.hot3:
+    conditions:
+      body_temperature:
+        gt: 40.25
+        lte: 41.5
+        unit: celsius
+  moodles.hot2:
+    conditions:
+      body_temperature:
+        gt: 39
+        lte: 40.25
+        unit: celsius
+  moodles.hot1:
+    conditions:
+      body_temperature:
+        gt: 38
+        lte: 39
+        unit: celsius
+  moodles.cold4:
+    conditions:
+      body_temperature:
+        lt: 28
+        unit: celsius
+  moodles.cold3:
+    conditions:
+      body_temperature:
+        gte: 28
+        lt: 32.5
+        unit: celsius
+  moodles.cold2:
+    conditions:
+      body_temperature:
+        gte: 32.5
+        lt: 34
+        unit: celsius
+  moodles.cold1:
+    conditions:
+      body_temperature:
+        gte: 34
+        lt: 35.5
+        unit: celsius
+  moodles.depression4:
+    conditions:
+      mood:
+        lte: -75
+        unit: percent
+  moodles.depression3:
+    conditions:
+      mood:
+        gt: -75
+        lt: -50
+        unit: percent
+  moodles.depression2:
+    conditions:
+      mood:
+        gte: -50
+        lt: -30
+        unit: percent
+  moodles.depression1:
+    conditions:
+      mood:
+        gte: -30
+        lt: -10
+        unit: percent
+  moodles.happy4:
+    conditions:
+      mood:
+        gte: 75
+        unit: percent
+  moodles.happy3:
+    conditions:
+      mood:
+        gt: 50
+        lt: 75
+        unit: percent
+  moodles.happy2:
+    conditions:
+      mood:
+        gt: 30
+        lte: 50
+        unit: percent
+  moodles.happy1:
+    conditions:
+      mood:
+        gt: 10
+        lte: 30
+        unit: percent
+  moodles.clawdamage2:
+    conditions:
+      claw_health:
+        lt: 25
+        unit: percent
+  moodles.clawdamage1:
+    conditions:
+      claw_health:
+        gte: 25
+        lt: 60
+        unit: percent
+  moodles.deaf4:
+    conditions:
+      hearing_loss:
+        gt: 70
+        unit: percent
+  moodles.deaf3:
+    conditions:
+      hearing_loss:
+        gt: 40
+        lte: 70
+        unit: percent
+  moodles.deaf2:
+    conditions:
+      hearing_loss:
+        gt: 15
+        lte: 40
+        unit: percent
+  moodles.dirty2:
+    conditions:
+      dirtiness:
+        gt: 80
+        unit: percent
+  moodles.dirty1:
+    conditions:
+      dirtiness:
+        gt: 50
+        lte: 80
+        unit: percent
+  moodles.encumbered4:
+    conditions:
+      encumbrance:
+        gt: 0.85
+  moodles.encumbered3:
+    conditions:
+      encumbrance:
+        gt: 0.55
+        lte: 0.85
+  moodles.encumbered2:
+    conditions:
+      encumbrance:
+        gt: 0.3
+        lte: 0.55
+  moodles.encumbered1:
+    conditions:
+      encumbrance:
+        gt: 0
+        lte: 0.3
+  moodles.wet4:
+    conditions:
+      wetness:
+        gt: 70
+        unit: percent
+  moodles.wet3:
+    conditions:
+      wetness:
+        gt: 45
+        lte: 70
+        unit: percent
+  moodles.wet2:
+    conditions:
+      wetness:
+        gt: 20
+        lte: 45
+        unit: percent
+  moodles.wet1:
+    conditions:
+      wetness:
+        gt: 5
+        lte: 20
+        unit: percent
+  moodles.highimmunity:
+    conditions:
+      immunity:
+        gt: 150
+        unit: percent
+  moodles.lowimmunity:
+    conditions:
+      immunity:
+        lt: 55
+        unit: percent
+  moodles.keratinbooster:
+    conditions:
+      claw_regeneration:
+        gt: 0
+  moodles.underweight4:
+    conditions:
+      body_weight:
+        lte: 33
+        unit: kg
+  moodles.underweight3:
+    conditions:
+      body_weight:
+        gt: 33
+        lt: 36.4
+        unit: kg
+  moodles.underweight2:
+    conditions:
+      body_weight:
+        gte: 36.4
+        lt: 39.8
+        unit: kg
+  moodles.underweight1:
+    conditions:
+      body_weight:
+        gte: 39.8
+        lt: 44.9
+        unit: kg
+  moodles.overweight4:
+    conditions:
+      body_weight:
+        gte: 67
+        unit: kg
+  moodles.overweight3:
+    conditions:
+      body_weight:
+        gt: 63.6
+        lt: 67
+        unit: kg
+  moodles.overweight2:
+    conditions:
+      body_weight:
+        gt: 60.2
+        lte: 63.6
+        unit: kg
+  moodles.overweight1:
+    conditions:
+      body_weight:
+        gt: 55.1
+        lte: 60.2
+        unit: kg
+  moodles.trauma4:
+    conditions:
+      trauma:
+        gt: 80
+        unit: percent
+  moodles.trauma3:
+    conditions:
+      trauma:
+        gt: 45
+        lte: 80
+        unit: percent
+  moodles.trauma2:
+    conditions:
+      trauma:
+        gt: 25
+        lte: 45
+        unit: percent
+  moodles.energized:
+    conditions:
+      caffeine:
+        gt: 0
+  moodles.badsleep:
+    conditions:
+      bad_sleep:
+        gt: 0
+  moodles.impairedspeech:
+    conditions:
+      conscious:
+        is: true
+      impaired_speech:
+        is: true
+  moodles.rnrs:
+    conditions:
+      brain_grow_discomfort:
+        gt: 0
+  moodles.rippedjaw:
+    conditions:
+      disfigured:
+        is: true
+  moodles.amputation:
+    conditions:
+      any_limb_dismembered:
+        is: true
+  moodles.rippedeyes:
+    conditions:
+      both_eyes_gone:
+        is: true
+  moodles.rippedeye:
+    conditions:
+      eye_gone:
+        is: true
+      both_eyes_gone:
+        is: false
+  moodles.adrenaline:
+    conditions:
+      adrenaline:
+        gt: 20
+        unit: percent
+  moodles.hollow:
+    conditions:
+      mindwipe_active:
+        is: true

@@ -1,0 +1,830 @@
+schema_version: 19
+buildings:
+  buildings.BloodCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.bloodcrystalshard
+  buildings.DigestionCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.digestioncrystalshard
+  buildings.EmissiveCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.emissivecrystalshard
+  buildings.LifePodLight:
+    health: 50
+    drops:
+      rolls:
+        - item: main.lightbulb
+          condition:
+            min: 0
+            max: 0.1
+  buildings.LoreNote:
+    health: 50
+  buildings.OxygenCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.oxygencrystalshard
+  buildings.ReliefCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.reliefcrystalshard
+  buildings.SoothingCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.soothingcrystalshard
+  buildings.TurbulentCrystal:
+    health: 250
+    drops:
+      always:
+        - item: main.turbulentcrystalshard
+  buildings.animalcorpse:
+    health: 250
+    drops:
+      always:
+        - item: main.animalflesh
+          condition:
+            min: 0.7
+            max: 1
+        - item: main.animalflesh
+          condition:
+            min: 0.7
+            max: 1
+  buildings.bananaplant:
+    health: 150
+    drops:
+      rolls:
+        - item: main.foliage
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.foliage
+          chance: 0.5
+          condition:
+            min: 0.2
+            max: 1
+  buildings.barbedwirefence:
+    health: 600
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0.8
+            max: 1
+  buildings.beartrap:
+    health: 500
+    drops:
+      rolls:
+        - item: main.scrapmetal
+  buildings.bioterminal:
+    health: 1000
+    drops:
+      rolls:
+        - item: main.circuitboard
+          chance: 0.25
+  buildings.bouncecap:
+    health: 500
+    drops:
+      rolls:
+        - item: main.funguschunk
+        - item: main.funguschunk
+  buildings.brownshroom:
+    health: 50
+    drops:
+      rolls:
+        - item: main.browncap
+          condition:
+            min: 0.8
+            max: 1
+  buildings.cactus:
+    health: 100
+    drops:
+      rolls:
+        - item: main.cactusflesh
+        - item: main.cactusflesh
+          chance: 0.6
+        - item: main.cactusflesh
+          chance: 0.35
+  buildings.cavetick:
+    health: 15
+    drops:
+      rolls:
+        - item: main.venomgland
+          chance: 0.075
+  buildings.ceilingrye:
+    health: 100
+    drops:
+      rolls:
+        - item: main.ryebulb
+        - item: main.ryebulb
+          chance: 0.25
+        - item: main.ryebulb
+          chance: 0.25
+  buildings.climbingropeextended:
+    health: 500
+  buildings.coil:
+    health: 500
+    drops:
+      rolls:
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+          chance: 0.5
+        - item: main.scrapmetal
+          chance: 0.25
+        - item: main.circuitboard
+          chance: 0.35
+  buildings.containercrate:
+    health: 5000
+    drops:
+      pools:
+        - amount: 1
+          categories:
+            - utility
+            - utility
+            - container
+            - container
+            - tool
+            - medical
+  buildings.corpse:
+    health: 250
+    drops:
+      always:
+        - item: main.experimentflesh
+          condition:
+            min: 0
+            max: 1
+        - item: main.experimentflesh
+          condition:
+            min: 0
+            max: 1
+        - item: main.experimentflesh
+          condition:
+            min: 0
+            max: 1
+  buildings.crystalbig:
+    health: 900
+  buildings.crystalenemy:
+    health: 450
+    drops:
+      always:
+        - item: main.exposedcore
+  buildings.crystalmassive:
+    health: 2500
+  buildings.crystalmedium:
+    health: 500
+  buildings.crystalmini:
+    health: 50
+  buildings.crystalsmall:
+    health: 150
+  buildings.drillpod:
+    health: 10000
+    drops:
+      rolls:
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.circuitboard
+        - item: main.circuitboard
+  buildings.drillpodbroken:
+    health: 300
+    drops:
+      rolls:
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.circuitboard
+        - item: main.circuitboard
+  buildings.dropcapsule:
+    health: 2500
+    drops:
+      pools:
+        - amount: 2
+          categories:
+            - medical
+            - medical
+            - food
+            - food
+            - water
+            - water
+            - utility
+            - utility
+            - container
+            - container
+            - drug
+            - drug
+            - tool
+            - medical
+  buildings.drybush:
+    health: 100
+    drops:
+      rolls:
+        - item: main.dryfoliage
+        - item: main.dryfoliage
+          chance: 0.9
+        - item: main.dryfoliage
+          chance: 0.6
+        - item: main.dryfoliage
+          chance: 0.4
+  buildings.foodbox:
+    health: 600
+    drops:
+      pools:
+        - amount: 1
+          categories:
+            - food
+            - water
+            - food
+  buildings.frigiant:
+    health: 120
+    drops:
+      rolls:
+        - item: main.frigiantfruit
+        - item: main.frigiantfruit
+          chance: 0.8
+  buildings.fungalibungali:
+    health: 80
+    drops:
+      rolls:
+        - item: main.bunchunk
+          chance: 0.5
+        - item: main.funguschunk
+  buildings.geotree:
+    health: 80
+    drops:
+      rolls:
+        - item: main.geofruit
+        - item: main.geofruit
+          chance: 0.5
+        - item: main.geofruit
+          chance: 0.25
+        - item: main.foliage
+        - item: main.foliage
+          chance: 0.3
+  buildings.geyser:
+    health: 250
+  buildings.glassshards:
+    health: 30
+  buildings.glowplant:
+    health: 40
+    drops:
+      rolls:
+        - item: main.glowplantfruit
+        - item: main.glowplantfruit
+          chance: 0.95
+        - item: main.foliage
+        - item: main.foliage
+          chance: 0.25
+          condition:
+            min: 0.5
+            max: 1
+  buildings.glowshroom:
+    health: 75
+    drops:
+      rolls:
+        - item: main.funguschunk
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.funguschunk
+          chance: 0.5
+          condition:
+            min: 0.5
+            max: 1
+  buildings.grabberplant:
+    health: 1500
+  buildings.grabbershroom:
+    health: 2000
+  buildings.gunmine:
+    health: 400
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0
+            max: 1
+        - item: main.scrapmetal
+          condition:
+            min: 0
+            max: 1
+  buildings.hydreed:
+    health: 150
+    drops:
+      rolls:
+        - item: main.aquapple
+          chance: 0.5
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.aquapple
+          chance: 0.5
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.musharm
+          chance: 0.5
+        - item: main.musharm
+          chance: 0.5
+        - item: main.mushtail
+          chance: 0.5
+      always:
+        - item: main.aquapple
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.aquapple
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.musharm
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.mushpear
+  buildings.icestalactite:
+    health: 100
+  buildings.icestalagmite:
+    health: 400
+  buildings.jumppad:
+    health: 600
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0
+            max: 1
+        - item: main.scrapmetal
+          chance: 0.5
+          condition:
+            min: 0
+            max: 1
+        - item: main.scrapmetal
+          chance: 0.25
+          condition:
+            min: 0
+            max: 1
+        - item: main.circuitboard
+          chance: 0.5
+          condition:
+            min: 0
+            max: 1
+  buildings.ladder:
+    health: 1000
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0.1
+            max: 1
+        - item: main.scrapmetal
+          condition:
+            min: 0.1
+            max: 1
+        - item: main.scrapmetal
+          condition:
+            min: 0.1
+            max: 1
+  buildings.landmine:
+    health: 100
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0
+            max: 0.2
+  buildings.leadbush:
+    health: 120
+    drops:
+      rolls:
+        - item: main.blobflesh
+        - item: main.blobflesh
+          chance: 0.5
+        - item: main.blobflesh
+          chance: 0.2
+  buildings.lifepodbuttonheat:
+    health: 100
+  buildings.lifepodbuttonshower:
+    health: 100
+  buildings.lifepodchest:
+    health: 2000
+    drops:
+      rolls:
+        - item: main.blueprint
+      pools:
+        - amount: 2
+          categories:
+            - medical
+            - medical
+            - food
+            - food
+            - water
+            - water
+            - utility
+            - utility
+            - container
+            - container
+            - tool
+            - trash
+            - drug
+            - drug
+            - medical
+  buildings.lifepodheater:
+    health: 300
+  buildings.lifepodpump:
+    health: 2000
+    drops:
+      rolls:
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.plasticchunk
+  buildings.lifepodshower:
+    health: 150
+    drops:
+      rolls:
+        - item: main.scrapmetal
+  buildings.medcrate:
+    health: 1000
+    drop_chance_multiplier: 0.67
+    drops:
+      rolls:
+        - item: main.bloodbaghuman
+          chance: 0.05
+          condition:
+            min: 0.5
+            max: 1
+      pools:
+        - amount: 1
+          categories:
+            - drug
+            - drug
+            - water
+            - medical
+            - medical
+            - medical
+            - medical
+            - medical
+  buildings.mushroomdropper:
+    health: 100
+  buildings.mushroomdropperpayload:
+    health: 100
+  buildings.mushroomplatform:
+    health: 400
+    drops:
+      rolls:
+        - item: main.funguschunk
+        - item: main.funguschunk
+  buildings.mushroomrope:
+    health: 10
+  buildings.mushroomtree:
+    health: 800
+    drops:
+      rolls:
+        - item: main.funguschunk
+        - item: main.funguschunk
+        - item: main.funguschunk
+        - item: main.funguschunk
+        - item: main.funguschunk
+        - item: main.funguschunk
+          chance: 0.75
+        - item: main.funguschunk
+          chance: 0.75
+        - item: main.funguschunk
+          chance: 0.75
+        - item: main.funguschunk
+          chance: 0.75
+        - item: main.funguschunk
+          chance: 0.25
+        - item: main.funguschunk
+          chance: 0.25
+        - item: main.funguschunk
+          chance: 0.25
+        - item: main.funguschunk
+          chance: 0.25
+        - item: main.funguschunk
+          chance: 0.25
+  buildings.oilpipe:
+    health: 500
+  buildings.overgrowntick:
+    health: 300
+    drops:
+      rolls:
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.animalflesh
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.carcass
+        - item: main.venomgland
+          chance: 0.8
+          condition:
+            min: 0.8
+            max: 1
+  buildings.pop:
+    health: 150
+    drops:
+      rolls:
+        - item: main.popfruit
+        - item: main.popfruit
+          chance: 0.5
+        - item: main.popfruit
+          chance: 0.25
+        - item: main.bulbskin
+        - item: main.bulbskin
+          chance: 0.5
+        - item: main.bulbskin
+          chance: 0.25
+        - item: main.helluce
+          chance: 0.5
+        - item: main.helluce
+          chance: 0.5
+        - item: main.dryfoliage
+  buildings.radbarrel:
+    health: 2000
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0.2
+            max: 0.8
+        - item: main.scrapmetal
+          condition:
+            min: 0.2
+            max: 0.8
+        - item: main.scrapmetal
+          chance: 0.5
+          condition:
+            min: 0.2
+            max: 0.8
+        - item: main.scrapmetal
+          chance: 0.5
+          condition:
+            min: 0.2
+            max: 0.8
+  buildings.rechargingstation:
+    health: 1000
+  buildings.reinforceddoor:
+    health: 15000
+  buildings.sandrose:
+    health: 80
+    drops:
+      rolls:
+        - item: main.rosepod
+        - item: main.rosepod
+          chance: 0.5
+        - item: main.rosepod
+          chance: 0.1
+        - item: main.foliage
+        - item: main.foliage
+          chance: 0.2
+  buildings.sandvine:
+    health: 10
+  buildings.sawblade:
+    health: 400
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.scrapmetal
+          condition:
+            min: 0.2
+            max: 1
+  buildings.scrapeater:
+    health: 1000
+    drops:
+      rolls:
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+  buildings.shadecrawler:
+    health: 100
+    drops:
+      rolls:
+        - item: main.carcass
+        - item: main.bloodsac
+          chance: 0.5
+        - item: main.venomgland
+          chance: 0.5
+  buildings.shuttledoor:
+    health: 5000
+  buildings.shuttleelevator:
+    health: 15000
+  buildings.sidestabber:
+    health: 400
+    drops:
+      rolls:
+        - item: main.funguschunk
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.funguschunk
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.funguschunk
+          condition:
+            min: 0.2
+            max: 1
+  buildings.skullcrusher:
+    health: 800
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0
+            max: 1
+  buildings.snowstrider:
+    health: 500
+    drops:
+      rolls:
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.animalflesh
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.animalflesh
+          chance: 0.9
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.striderpelt
+          condition:
+            min: 0.01
+            max: 1
+  buildings.soundcannon:
+    health: 1500
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.scrapmetal
+          chance: 0.8
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.scrapmetal
+          chance: 0.4
+          condition:
+            min: 0.2
+            max: 1
+        - item: main.circuitboard
+          chance: 0.5
+  buildings.spaceheater:
+    health: 400
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0.5
+            max: 1
+        - item: main.scrapmetal
+          condition:
+            min: 0.1
+            max: 1
+        - item: main.circuitboard
+          chance: 0.5
+  buildings.spentfuel:
+    health: 20000
+  buildings.spikestabber:
+    health: 800
+    drops:
+      rolls:
+        - item: main.scrapmetal
+          condition:
+            min: 0
+            max: 1
+        - item: main.scrapmetal
+          chance: 0.5
+          condition:
+            min: 0
+            max: 1
+        - item: main.scrapmetal
+          chance: 0.5
+          condition:
+            min: 0
+            max: 1
+        - item: main.circuitboard
+          chance: 0.35
+          condition:
+            min: 0
+            max: 1
+  buildings.stalactite:
+    health: 200
+  buildings.stalagmite:
+    health: 500
+  buildings.stoneplant:
+    health: 200
+    drops:
+      rolls:
+        - item: main.stonefruitclosed
+        - item: main.stonefruitclosed
+          chance: 0.8
+        - item: main.stonefruitclosed
+          chance: 0.5
+        - item: main.stonefruitclosed
+          chance: 0.3
+  buildings.terminal:
+    health: 100000
+  buildings.thornbackelder:
+    health: 6000
+    drops:
+      rolls:
+        - item: main.fleshchunk
+        - item: main.fleshchunk
+        - item: main.fleshchunk
+        - item: main.fleshchunk
+        - item: main.bloodsac
+        - item: main.bloodsac
+        - item: main.bloodsac
+        - item: main.bloodsac
+        - item: main.bloodsac
+        - item: main.bloodsac
+        - item: main.internalorgans
+        - item: main.carcass
+        - item: main.carcass
+        - item: main.carcass
+        - item: main.largecarcass
+        - item: main.largecarcass
+      pools:
+        - amount: 7
+          categories:
+            - tool
+            - medical
+            - drug
+            - utility
+  buildings.thornbackyoung:
+    health: 280
+    drops:
+      rolls:
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.animalflesh
+          condition:
+            min: 0.2
+            max: 1
+  buildings.trader:
+    health: 1000
+    drops:
+      rolls:
+        - item: main.experimentflesh
+        - item: main.experimentflesh
+        - item: main.experimentflesh
+        - item: main.experimentflesh
+        - item: main.internalorgans
+  buildings.turret:
+    health: 500
+    drops:
+      rolls:
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.scrapmetal
+        - item: main.circuitboard
+  buildings.tutorialcraftingbutton:
+    health: 100
+  buildings.wallbiter:
+    health: 400
+    drops:
+      rolls:
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.bloodsac
+          chance: 0.8
+        - item: main.animalflesh
+          condition:
+            min: 0.2
+            max: 1
+  buildings.xaloris:
+    health: 100
+    drops:
+      rolls:
+        - item: main.foliage
+        - item: main.foliage
+          chance: 0.5
+        - item: main.xalorissponge
+        - item: main.xalorissponge
+          chance: 0.5
+          condition:
+            min: 0.5
+            max: 1

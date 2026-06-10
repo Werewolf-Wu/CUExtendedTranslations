@@ -1,0 +1,1680 @@
+schema_version: 19
+# We can drink || applyOnLimb, and inject on health panel. 
+liquids:
+  other.water:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        thirst:
+          add: 9
+    locale: other.cleanwater
+  other.carbonatedwater:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        mood:
+          add: 0.8
+        thirst:
+          add: 9
+  other.lrdserum:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sickness:
+          add: 5
+  other.morphine:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 40
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 90
+  other.biochem:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        disinfect_duration:
+          add: 200
+        mood:
+          add: -10
+        muscle_health:
+          add: -5.5
+        pain:
+          add: 10
+        sickness:
+          add: 40
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.2
+        muscle_health:
+          add: -10
+        pain:
+          add: 40
+        sickness:
+          add: 170
+  other.opium:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 20
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 40
+  other.painkillers:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 140
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.heroin:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 60
+        sickness:
+          add: 25
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 130
+        sickness:
+          add: 50
+  other.naloxone:
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate_antagonism:
+          add: 50
+  other.naltrexone:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -10
+        opiate_antagonism:
+          add: 75
+        opiate_tolerance:
+          add: -75
+        sickness:
+          add: -1
+        vomiting:
+          chance: 0.75
+          present: true
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.ceftriaxone:
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        infection_resistance:
+          add: 1125
+          unit: second
+  other.fentanyl:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 4000
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        opiate:
+          add: 4200
+  other.ketchup:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.34
+          unit: kg
+        hunger:
+          add: 8
+        mood:
+          add: -2.5
+        sickness:
+          add: 5
+        thirst:
+          add: 6
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.milk:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        body_weight:
+          add: 0.14
+          unit: kg
+        hunger:
+          add: 3
+        mood:
+          add: 0.5
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.04
+        sickness:
+          add: 14
+  other.chloroform:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        consciousness:
+          add: -8
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        consciousness:
+          add: -8
+  other.highgradestimulant:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        adrenaline:
+          add: 25
+        consciousness:
+          add: 3.5
+        stamina:
+          add: 3
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        adrenaline:
+          add: 25
+        consciousness:
+          add: 3.5
+        stamina:
+          add: 3
+  other.midgradestimulant:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -2
+        sickness:
+          add: 10
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        adrenaline:
+          add: 7
+        brain_health:
+          add: -0.05
+        consciousness:
+          add: 2
+        energy:
+          add: -29.9
+        internal_bleeding:
+          add: 0.21
+        pain:
+          add: 4
+        sickness:
+          add: 0.1
+        stamina:
+          - add: 2
+          - chance: 0.1
+            add: -60
+        vomiting:
+          present: true
+  other.lowgradestimulant:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -1.5
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        adrenaline:
+          add: 20
+        body_temperature:
+          add: 0.03
+        consciousness:
+          add: 1
+        energy:
+          add: 0.03
+        sickness:
+          add: 0.18
+        stamina:
+          add: 1.5
+  other.applejuice:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.3
+        body_weight:
+          add: 0.03
+          unit: kg
+        mood:
+          add: 1
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.04
+        sickness:
+          add: 14
+  other.orangejuice:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.1
+        body_weight:
+          add: 0.02
+          unit: kg
+        mood:
+          add: -1.5
+        sickness:
+          add: -2.5
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.04
+        sickness:
+          add: 14
+  other.lemonade:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.3
+        body_weight:
+          add: 0.07
+          unit: kg
+        mood:
+          add: 1.2
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.04
+        sickness:
+          add: 14
+  other.urine:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.3
+        mood:
+          add: -2.5
+        sickness:
+          add: 7.5
+        thirst:
+          add: 7
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.2
+        sickness:
+          add: 70
+  other.icetea:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.3
+        body_weight:
+          add: 0.14
+          unit: kg
+        mood:
+          add: 1.4
+        sickness:
+          add: 3.5
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.04
+        sickness:
+          add: 14
+    locale: other.icedtea
+  other.soup:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.17
+          unit: kg
+        hunger:
+          add: 10
+        mood:
+          add: 1
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.06
+        sickness:
+          add: 21
+  other.chocolatemilk:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        body_weight:
+          add: 0.1
+          unit: kg
+        hunger:
+          add: 2.5
+        mood:
+          add: 1
+        sickness:
+          add: 12
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.cereal:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        body_weight:
+          add: 0.14
+          unit: kg
+        hunger:
+          add: 6
+        mood:
+          add: 1.5
+        thirst:
+          add: 7.5
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.09
+        sickness:
+          add: 31.5
+  other.coffee:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.03
+          unit: kg
+        caffeine:
+          add: 350
+        energy:
+          add: 15
+        mood:
+          add: 2.5
+        sickness:
+          add: 15
+        stamina:
+          add: 25
+        thirst:
+          add: 12
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.07
+        sickness:
+          add: 24.5
+  other.energydrink:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.14
+          unit: kg
+        caffeine:
+          add: 400
+        energy:
+          add: 20
+        mood:
+          add: 2.5
+        sickness:
+          add: 20
+        stamina:
+          add: 25
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.07
+        sickness:
+          add: 24.5
+  other.sportsdrink:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.34
+          unit: kg
+        energy:
+          add: 10
+        mood:
+          add: 0.5
+        sickness:
+          add: 2
+        stamina:
+          add: 25
+        thirst:
+          add: 13
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.04
+        sickness:
+          add: 14
+  other.oliveoil:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.68
+          unit: kg
+        dirtiness:
+          add: 5
+        hunger:
+          add: 8
+        mood:
+          add: -1
+        sickness:
+          add: 12
+        thirst:
+          add: 3
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.hotsauce:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: 0.2
+        body_weight:
+          add: 0.68
+          unit: kg
+        hunger:
+          add: 5
+        sickness:
+          add: 3
+        thirst:
+          add: 4
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.icecream:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.2
+        body_weight:
+          add: 0.41
+          unit: kg
+        hunger:
+          add: 6
+        mood:
+          add: 1.5
+        sickness:
+          add: 1.5
+        thirst:
+          add: 6
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.yogurt:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.15
+        body_weight:
+          add: 0.14
+          unit: kg
+        hunger:
+          add: 9
+        mood:
+          add: 0.2
+        sickness:
+          add: 1
+        thirst:
+          add: 4
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.mold:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.14
+          unit: kg
+        hunger:
+          add: 3
+        mood:
+          add: -4
+        sickness:
+          add: 30
+        vomiting:
+          present: true
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.3
+        sickness:
+          add: 105
+  other.powderedmilk:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.45
+          unit: kg
+        hunger:
+          add: 26.67
+        mood:
+          add: -1.67
+        sickness:
+          add: 13.33
+        thirst:
+          add: -26.67
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.radwater:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.2
+        radiation_sickness:
+          add: 0.35
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.02
+        sickness:
+          add: 7
+  other.mercury:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -20
+        brain_health:
+          add: -0.05
+        mood:
+          add: -4
+        sickness:
+          add: 25
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -1
+        sickness:
+          add: 350
+  other.soda:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.3
+        body_weight:
+          add: 0.14
+          unit: kg
+        caffeine:
+          add: 80
+        energy:
+          add: 4
+        mood:
+          add: 1.5
+        sickness:
+          add: 5
+        stamina:
+          add: 4
+        thirst:
+          add: 9
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.06
+        sickness:
+          add: 21
+  other.alcohol:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        sickness:
+          add: 7
+        thirst:
+          add: 7.5
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.08
+        sickness:
+          add: 26.25
+    apply:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        disinfect_duration:
+          add: 350
+        pain:
+          add: 10
+  other.bleach:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -5
+        muscle_health:
+          add: -0.23
+        pain:
+          add: 1.5
+        sickness:
+          add: 0.3
+        skin_health:
+          add: -0.1
+        thirst:
+          add: 6.8
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.5
+        sickness:
+          add: 175
+    apply:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        disinfect_duration:
+          add: 400
+        infection:
+          add: -5
+        muscle_health:
+          add: -15
+        pain:
+          add: 25
+        skin_heal:
+          add: -20
+  other.reliefcream:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sickness:
+          add: 10
+        vomiting:
+          chance: 1
+          present: true
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.08
+        sickness:
+          add: 26.25
+    apply:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        disinfect_duration:
+          add: 300
+        skin_heal:
+          add: 30
+  other.woundglue:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sickness:
+          add: 10
+        vomiting:
+          chance: 1
+          present: true
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.08
+        sickness:
+          add: 26.25
+    apply:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: 15
+        sickness:
+          add: 12.5
+  other.braingrow:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        brain_health:
+          add: 0.5
+        mood:
+          add: -25
+        shock:
+          add: 50
+        sickness:
+          add: 100
+        stroke:
+          add: -1.5
+        vomiting:
+          chance: 1
+          present: true
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.mindwipe:
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.antidepressants:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        antidepressant:
+          add: 500
+        mood:
+          add: 5
+        sickness:
+          chance: 0.3
+          add: 150
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.antibiotics:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        infection_resistance:
+          add: 2500
+          unit: second
+        mood:
+          add: -5
+        sepsis:
+          add: -25
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.05
+        sickness:
+          add: 17.5
+  other.antivenom:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sickness:
+          add: 24
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        toxin:
+          add: -80
+  other.antiserum:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        infection_resistance:
+          add: 100
+          unit: second
+        sickness:
+          add: 30
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_volume:
+          add: 6
+        disinfect_duration:
+          add: 150
+        infection_resistance:
+          add: 600
+          unit: second
+        sepsis:
+          add: -20
+  other.keratinbooster:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        claw_regeneration:
+          add: 2400
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        claw_regeneration:
+          add: 2800
+  other.antirad:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        radiation_sickness:
+          add: -0.2
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.sleepingpills:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sleepiness:
+          add: 6000
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.1
+        sickness:
+          add: 35
+  other.procoagulant:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: 1.75
+        mood:
+          add: -6
+        stroke:
+          add: -10
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: 1.75
+        stroke:
+          add: -10
+  other.epinephrine:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        adrenaline:
+          add: 100
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        adrenaline:
+          add: 100
+  other.oxyline:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        muscle_health:
+          add: -2.5
+        pain:
+          add: 8
+        shock:
+          add: 28
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_oxygen:
+          add: 1.67
+        blood_volume:
+          add: 0.1
+        breathing:
+          add: 2.5
+        fibrillation:
+          add: -1.2
+        stamina:
+          add: 2.5
+  other.sodiumnitroprusside:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sickness:
+          add: 5
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        drug_blood_pressure_change:
+          add: 600
+  other.vasopressin:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        drug_blood_pressure_change:
+          add: -50
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        drug_blood_pressure_change:
+          add: -600
+  other.amiodarone:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        sickness:
+          add: 10
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        muscle_health:
+          add: -0.75
+  other.streptokinase:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -75
+        sickness:
+          add: 30
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -150
+        sickness:
+          add: 15
+  other.saline:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -0.53
+        sickness:
+          add: 4.27
+        thirst:
+          add: 9.33
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -6.67
+        blood_volume:
+          add: 5.33
+        thirst:
+          add: 9.33
+  other.ringersolution:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -0.57
+        sickness:
+          add: 3.43
+        thirst:
+          add: 8.57
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -5.71
+        blood_volume:
+          add: 5
+        thirst:
+          add: 8.57
+  other.blood:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -0.93
+        sickness:
+          add: 8
+        thirst:
+          add: 2.67
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_volume:
+          add: 4
+  other.redblood:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -0.93
+        sickness:
+          add: 9.33
+        thirst:
+          add: 2.67
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_volume:
+          add: 4
+        sepsis:
+          add: 5.33
+        sickness:
+          add: 6.67
+  other.alienblood:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -0.93
+        sickness:
+          add: 8
+        thirst:
+          add: 2.67
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_volume:
+          add: 3.47
+        sepsis:
+          add: 1.33
+        sickness:
+          add: 2.67
+  other.disinfectant:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        disinfect_duration:
+          add: 240
+        sickness:
+          add: 15
+        thirst:
+          add: 4
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.13
+        sickness:
+          add: 43.75
+    apply:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        disinfect_duration:
+          add: 240
+        pain:
+          add: 10
+  other.groundwater:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        mood:
+          add: -0.5
+        sickness:
+          chance: 0.5
+          add_range:
+            min: 7
+            max: 15
+        thirst:
+          add: 8
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.02
+        sickness:
+          add: 5.25
+  other.lumalgae:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        body_weight:
+          add: 0.03
+          unit: kg
+        hunger:
+          add: 2
+        mood:
+          add: -1
+        sickness:
+          chance: 0.65
+          add_range:
+            min: 6
+            max: 8.5
+        thirst:
+          add: 6.5
+        vomiting:
+          chance: 0.1
+          present: true
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.16
+        sickness:
+          add: 56
+    locale: other.algae
+  other.oil:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 1.02
+          unit: kg
+        hunger:
+          add: 2
+        mood:
+          add: -3
+        sickness:
+          add: 30
+        thirst:
+          add: 1
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.5
+        sickness:
+          add: 175
+  other.sap:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.17
+          unit: kg
+        hunger:
+          add: 4.5
+        mood:
+          add: 0.5
+        sickness:
+          add_range:
+            min: 0.8
+            max: 0.9
+        thirst:
+          add: 4
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.2
+        sickness:
+          add: 70
+  other.dirtywater:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.25
+        mood:
+          add: -1
+        sickness:
+          add_range:
+            min: 6
+            max: 8
+        thirst:
+          add: 6
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.2
+        sickness:
+          add: 70
+  other.fat:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_weight:
+          add: 0.27
+          unit: kg
+        hunger:
+          add: 5
+        mood:
+          add: -0.5
+        sickness:
+          add: 4
+        thirst:
+          add: 4
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.2
+        sickness:
+          add: 70
+  other.soap:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        mood:
+          add: -2
+        sickness:
+          add: 20
+        thirst:
+          add: 4
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.16
+        sickness:
+          add: 56
+    apply:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        dirtiness:
+          add: -25
+  other.producejuice:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.3
+        body_weight:
+          add: 0.07
+          unit: kg
+        hunger:
+          add: 2
+        mood:
+          add: 0.03
+        thirst:
+          add: 8.5
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.09
+        sickness:
+          add: 31.5
+  other.refinedjuice:
+    drink:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        body_temperature:
+          add: -0.2
+        body_weight:
+          add: 0.07
+          unit: kg
+        hunger:
+          add: 2.5
+        mood:
+          add: 0.2
+        thirst:
+          add: 9.5
+    inject:
+      amount:
+        value: 100
+        unit: ml
+      effects:
+        blood_viscosity:
+          add: -0.07
+        sickness:
+          add: 24.5

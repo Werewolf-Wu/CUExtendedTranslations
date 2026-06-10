@@ -1,0 +1,2333 @@
+schema_version: 19
+# The game lists recipes by int, then adding order.
+# quantity is for countable item stacks; amount is for uncountable volume or quality requirement.
+recipes:
+  main.rippeddressing:
+    - int: 0
+      category: medicine
+      inputs:
+        - quality: rippable
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.rippeddressing
+          quantity: 1
+  other.milk:
+    - int: 0
+      category: food
+      inputs:
+        - liquid_quality: water
+          amount:
+            value: 470
+            unit: ml
+        - liquid: other.powderedmilk
+          amount:
+            value: 30
+            unit: ml
+      outputs:
+        - liquid: other.milk
+          amount:
+            value: 500
+            unit: ml
+  main.rope:
+    - int: 1
+      category: materials
+      inputs:
+        - quality: foliage
+          amount: 2
+      outputs:
+        - item: main.rope
+          quantity: 1
+  main.sterilizedbandage:
+    - int: 1
+      category: medicine
+      inputs:
+        - quality: dressing
+          amount: 1
+          condition:
+            min: 0.9
+        - liquid_quality: disinfectant
+          amount:
+            value: 20
+            unit: ml
+      outputs:
+        - item: main.sterilizedbandage
+          quantity: 1
+  other.water:
+    - int: 1
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 0.1
+          consume: false
+        - liquid: other.groundwater
+          amount:
+            value: 50
+            unit: ml
+      outputs:
+        - liquid: other.water
+          amount:
+            value: 50
+            unit: ml
+  main.canvas:
+    - int: 2
+      category: materials
+      inputs:
+        - quality: foliage
+          amount: 3
+      outputs:
+        - item: main.canvas
+          quantity: 1
+  other.alienblood:
+    - int: 2
+      category: medicine
+      inputs:
+        - item: main.bloodsac
+          quantity: 1
+      outputs:
+        - liquid: other.alienblood
+          amount:
+            value: 50
+            unit: ml
+  main.bowlofcereal:
+    - int: 2
+      category: food
+      dont_drain_result_liquid: true
+      inputs:
+        - item: main.cereal
+          quantity: 1
+        - liquid: other.milk
+          amount:
+            value: 500
+            unit: ml
+      outputs:
+        - item: main.bowlofcereal
+          quantity: 3
+  other.producejuice:
+    - int: 2
+      category: food
+      inputs:
+        - quality: produce
+          amount: 3
+          condition:
+            min: 0.5
+        - quality: hammering
+          amount: 0.1
+          consume: false
+      outputs:
+        - liquid: other.producejuice
+          amount:
+            value: 250
+            unit: ml
+  main.woodscraps:
+    - int: 3
+      category: materials
+      inputs:
+        - quality: foliage
+          amount: 4
+      outputs:
+        - item: main.woodscraps
+          quantity: 1
+  other.biochem:
+    - int: 4
+      category: materials
+      inputs:
+        - item: main.glowplantfruit
+          quantity: 1
+      outputs:
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+  main.woodcube:
+    - int: 4
+      category: materials
+      inputs:
+        - item: main.woodscraps
+          quantity: 3
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.woodcube
+          quantity: 1
+  main.woodpanel:
+    - int: 4
+      category: materials
+      inputs:
+        - item: main.woodcube
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.woodpanel
+          quantity: 5
+  main.stick:
+    - int: 4
+      category: materials
+      inputs:
+        - item: main.woodcube
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.stick
+          quantity: 2
+  main.flimsyknife:
+    - int: 4
+      category: tools
+      inputs:
+        - item: main.scrapmetal
+          quantity: 1
+          condition:
+            min: 0.9
+        - item: main.rope
+          quantity: 1
+        - item: main.woodcube
+          quantity: 1
+      outputs:
+        - item: main.flimsyknife
+          quantity: 1
+  main.largecarcass:
+    - int: 4
+      category: materials
+      inputs:
+        - item: main.carcass
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.largecarcass
+          quantity: 1
+  main.makeshiftheadlamp:
+    - int: 4
+      category: utilities
+      inputs:
+        - item: main.carcass
+          quantity: 1
+        - item: main.glowplantfruit
+          quantity: 1
+        - item: main.rope
+          quantity: 1
+      outputs:
+        - item: main.makeshiftheadlamp
+          quantity: 1
+  other.refinedjuice:
+    - int: 4
+      category: food
+      inputs:
+        - liquid: other.producejuice
+          amount:
+            value: 250
+            unit: ml
+        - quality: heatsource
+          amount: 1
+          consume: false
+      outputs:
+        - liquid: other.refinedjuice
+          amount:
+            value: 200
+            unit: ml
+  main.campfire:
+    - int: 4
+      category: food
+      inputs:
+        - quality: firestarter
+          amount: 1
+          consume: false
+        - quality: flammable
+          amount: 3
+      outputs:
+        - item: main.campfire
+          quantity: 1
+  main.string:
+    - int: 5
+      category: materials
+      inputs:
+        - item: main.rope
+          quantity: 2
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.string
+          quantity: 3
+  main.foliagebag:
+    - int: 5
+      category: utilities
+      inputs:
+        - item: main.rope
+          quantity: 1
+        - item: main.canvas
+          quantity: 2
+      outputs:
+        - item: main.foliagebag
+          quantity: 1
+  main.scrappanel:
+    - int: 5
+      category: materials
+      inputs:
+        - item: main.scrapcube
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.scrappanel
+          quantity: 5
+  main.scraptube:
+    - int: 5
+      category: materials
+      inputs:
+        - item: main.scrapcube
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.scraptube
+          quantity: 2
+  main.nails:
+    - int: 5
+      category: materials
+      inputs:
+        - item: main.scrapcube
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.nails
+          quantity: 2
+  main.bandage:
+    - int: 5
+      category: medicine
+      inputs:
+        - item: main.rippeddressing
+          quantity: 2
+          condition:
+            min: 0.9
+      outputs:
+        - item: main.bandage
+          quantity: 1
+  main.pancake:
+    - int: 5
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: flour
+          amount: 1
+        - liquid_quality: water
+          amount:
+            value: 100
+            unit: ml
+        - liquid: other.sap
+          amount:
+            value: 100
+            unit: ml
+      outputs:
+        - item: main.pancake
+          quantity: 1
+  main.torch:
+    - int: 5
+      category: utilities
+      inputs:
+        - item: main.stick
+          quantity: 2
+        - item: main.rope
+          quantity: 1
+      outputs:
+        - item: main.torch
+          quantity: 1
+          condition: 0
+    - int: 5
+      category: utilities
+      repair: true
+      inputs:
+        - item: main.torch
+          quantity: 1
+        - quality: heatsource
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.torch
+          quantity: 1
+  main.canteen:
+    - int: 6
+      category: utilities
+      inputs:
+        - item: main.plasticchunk
+          quantity: 2
+        - item: main.rope
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.canteen
+          quantity: 1
+  main.scrapcube:
+    - int: 6
+      category: materials
+      inputs:
+        - item: main.scrapmetal
+          quantity: 1
+          condition:
+            min: 0.9
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.scrapcube
+          quantity: 1
+  main.limbwraps:
+    - int: 6
+      category: utilities
+      inputs:
+        - quality: dressing
+          amount: 2
+          condition:
+            min: 0.9
+      outputs:
+        - item: main.limbwraps
+          quantity: 1
+  main.carcasssplint:
+    - int: 6
+      category: medicine
+      inputs:
+        - item: main.largecarcass
+          quantity: 1
+        - item: main.carcass
+          quantity: 1
+        - item: main.rope
+          quantity: 1
+      outputs:
+        - item: main.carcasssplint
+          quantity: 1
+  main.ryeflour:
+    - int: 6
+      category: food
+      inputs:
+        - item: main.ryebulb
+          quantity: 1
+        - quality: hammering
+          amount: 0.5
+          consume: false
+      outputs:
+        - item: main.ryeflour
+          quantity: 1
+  main.pemmican:
+    - int: 6
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: meat
+          amount: 1
+          condition:
+            min: 0.2
+        - quality: produce
+          amount: 1
+          condition:
+            min: 0.5
+        - liquid_quality: fat
+          amount:
+            value: 75
+            unit: ml
+      outputs:
+        - item: main.pemmican
+          quantity: 1
+  main.burger:
+    - int: 6
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: meat
+          amount: 1
+          condition:
+            min: 0.2
+        - item: main.bread
+          quantity: 1
+          condition:
+            min: 0.2
+        - liquid_quality: condiment
+          amount:
+            value: 25
+            unit: ml
+      outputs:
+        - item: main.burger
+          quantity: 1
+  other.opium:
+    - int: 7
+      category: medicine
+      inputs:
+        - item: main.mushpear
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 50
+            unit: ml
+      outputs:
+        - liquid: other.opium
+          amount:
+            value: 50
+            unit: ml
+  main.slingbag:
+    - int: 7
+      category: utilities
+      inputs:
+        - item: main.foliagebag
+          quantity: 1
+        - item: main.string
+          quantity: 1
+        - item: main.rope
+          quantity: 2
+      outputs:
+        - item: main.slingbag
+          quantity: 1
+  main.makeshiftdiggingtool:
+    - int: 7
+      category: tools
+      inputs:
+        - item: main.flimsyknife
+          quantity: 1
+        - item: main.rope
+          quantity: 1
+        - item: main.stick
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.makeshiftdiggingtool
+          quantity: 1
+  main.spraybottle:
+    - int: 7
+      category: medicine
+      inputs:
+        - item: main.canteen
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.spraybottle
+          quantity: 1
+  main.charcoal:
+    - int: 7
+      category: utilities
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - item: main.droppings
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.charcoal
+          quantity: 3
+  main.bread:
+    - int: 7
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: flour
+          amount: 1
+        - liquid_quality: water
+          amount:
+            value: 150
+            unit: ml
+      outputs:
+        - item: main.bread
+          quantity: 1
+  main.foliagemeal:
+    - int: 7
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: foliage
+          amount: 3
+        - quality: produce
+          amount: 1
+      outputs:
+        - item: main.foliagemeal
+          quantity: 1
+  main.climbingrope:
+    - int: 7
+      category: utilities
+      inputs:
+        - item: main.rope
+          quantity: 2
+        - quality: nails
+          amount: 0.5
+          consume: false
+      outputs:
+        - item: main.climbingrope
+          quantity: 1
+  other.blood:
+    - int: 8
+      category: medicine
+      inputs:
+        - liquid: other.alienblood
+          amount:
+            value: 100
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 40
+            unit: ml
+      outputs:
+        - liquid: other.blood
+          amount:
+            value: 100
+            unit: ml
+  main.flammablepowder:
+    - int: 8
+      category: materials
+      inputs:
+        - item: main.stonefruitopen
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+        - liquid: other.biochem
+          amount:
+            value: 5
+            unit: ml
+      outputs:
+        - item: main.flammablepowder
+          quantity: 1
+  main.boxof12gauge:
+    - int: 8
+      category: utilities
+      inputs:
+        - item: main.woodpanel
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 2
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.boxof12gauge
+          quantity: 1
+  main.headlamp:
+    - int: 8
+      category: utilities
+      inputs:
+        - item: main.flashlight
+          quantity: 1
+        - item: main.rope
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.headlamp
+          quantity: 1
+  main.makeshifthelmet:
+    - int: 8
+      category: utilities
+      inputs:
+        - item: main.largecarcass
+          quantity: 1
+        - item: main.rope
+          quantity: 1
+        - item: main.string
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.makeshifthelmet
+          quantity: 1
+  main.woodsandals:
+    - int: 8
+      category: utilities
+      inputs:
+        - item: main.woodpanel
+          quantity: 2
+        - item: main.rope
+          quantity: 2
+        - item: main.string
+          quantity: 1
+      outputs:
+        - item: main.woodsandals
+          quantity: 1
+  other.fat:
+    - int: 8
+      category: food
+      inputs:
+        - quality: meat
+          amount: 1
+          condition:
+            min: 0.2
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: cutting
+          amount: 0.5
+          consume: false
+      outputs:
+        - liquid: other.fat
+          amount:
+            value: 100
+            unit: ml
+  other.soap:
+    - int: 8
+      category: medicine
+      inputs:
+        - liquid_quality: fat
+          amount:
+            value: 50
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 40
+            unit: ml
+      outputs:
+        - liquid: other.soap
+          amount:
+            value: 100
+            unit: ml
+  main.antisepticmush:
+    - int: 8
+      category: medicine
+      inputs:
+        - item: main.bulbskin
+          quantity: 1
+        - item: main.roselight
+          quantity: 1
+      outputs:
+        - item: main.antisepticmush
+          quantity: 1
+  main.splint:
+    - int: 8
+      category: medicine
+      inputs:
+        - item: main.woodpanel
+          quantity: 3
+        - item: main.scraptube
+          quantity: 2
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.splint
+          quantity: 1
+          condition: 0.8
+  main.syringe:
+    - int: 8
+      category: medicine
+      inputs:
+        - item: main.canteen
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.scraptube
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.syringe
+          quantity: 1
+  main.firestarter:
+    - int: 8
+      category: utilities
+      inputs:
+        - item: main.stick
+          quantity: 2
+        - item: main.rope
+          quantity: 1
+        - quality: foliage
+          amount: 1
+      outputs:
+        - item: main.firestarter
+          quantity: 1
+  other.morphine:
+    - int: 9
+      category: medicine
+      inputs:
+        - liquid: other.opium
+          amount:
+            value: 75
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 15
+            unit: ml
+      outputs:
+        - liquid: other.morphine
+          amount:
+            value: 50
+            unit: ml
+  other.saline:
+    - int: 9
+      category: medicine
+      inputs:
+        - liquid: other.water
+          amount:
+            value: 150
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - liquid_quality: blood
+          amount:
+            value: 15
+            unit: ml
+      outputs:
+        - liquid: other.saline
+          amount:
+            value: 175
+            unit: ml
+  main.makeshiftwrench:
+    - int: 9
+      category: tools
+      inputs:
+        - item: main.scraptube
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.makeshiftwrench
+          quantity: 1
+  main.crudecleaver:
+    - int: 9
+      category: tools
+      inputs:
+        - item: main.stick
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 2
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.crudecleaver
+          quantity: 1
+  main.circuitboard:
+    - int: 9
+      category: materials
+      repair: true
+      inputs:
+        - item: main.circuitboard
+          quantity: 1
+        - item: main.bundleofwires
+          quantity: 1
+      outputs:
+        - item: main.circuitboard
+          quantity: 1
+  main.flexiglass:
+    - int: 9
+      category: materials
+      inputs:
+        - item: main.plasticchunk
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.flexiglass
+          quantity: 1
+  main.tourniquet:
+    - int: 9
+      category: medicine
+      inputs:
+        - item: main.rope
+          quantity: 2
+        - item: main.string
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.tourniquet
+          quantity: 1
+          condition: 0.5
+  main.tweezers:
+    - int: 9
+      category: medicine
+      inputs:
+        - item: main.scrappanel
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.tweezers
+          quantity: 1
+          condition: 0.1
+  other.disinfectant:
+    - int: 9
+      category: medicine
+      inputs:
+        - liquid: other.biochem
+          amount:
+            value: 25
+            unit: ml
+        - liquid: other.soap
+          amount:
+            value: 50
+            unit: ml
+        - liquid_quality: blood
+          amount:
+            value: 25
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 50
+            unit: ml
+      outputs:
+        - liquid: other.disinfectant
+          amount:
+            value: 100
+            unit: ml
+  other.reliefcream:
+    - int: 9
+      category: medicine
+      inputs:
+        - item: main.flammablepowder
+          quantity: 1
+        - liquid_quality: water
+          amount:
+            value: 50
+            unit: ml
+        - liquid_quality: blood
+          amount:
+            value: 25
+            unit: ml
+        - liquid_quality: opiate
+          amount:
+            value: 50
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 25
+            unit: ml
+      outputs:
+        - liquid: other.reliefcream
+          amount:
+            value: 100
+            unit: ml
+  main.drillrepairkit:
+    - int: 9
+      category: tools
+      inputs:
+        - item: main.scrappanel
+          quantity: 2
+        - item: main.scraptube
+          quantity: 2
+        - item: main.scrapcube
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.drillrepairkit
+          quantity: 1
+  main.nutrientbar:
+    - int: 9
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - quality: flour
+          amount: 1
+        - quality: produce
+          amount: 1
+          condition:
+            min: 0.5
+        - liquid_quality: fat
+          amount:
+            value: 25
+            unit: ml
+      outputs:
+        - item: main.nutrientbar
+          quantity: 1
+  other.soup:
+    - int: 9
+      category: food
+      inputs:
+        - quality: heatsource
+          amount: 1
+          consume: false
+        - liquid_quality: water
+          amount:
+            value: 200
+            unit: ml
+        - liquid_quality: fat
+          amount:
+            value: 25
+            unit: ml
+        - quality: meat
+          amount: 1
+          condition:
+            min: 0.2
+        - quality: cutting
+          amount: 0.5
+          consume: false
+      outputs:
+        - liquid: other.soup
+          amount:
+            value: 300
+            unit: ml
+  other.painkillers:
+    - int: 10
+      category: medicine
+      inputs:
+        - item: main.reliefcrystalshard
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 50
+            unit: ml
+      outputs:
+        - liquid: other.painkillers
+          amount:
+            value: 200
+            unit: ml
+  main.processedcopper:
+    - int: 10
+      category: materials
+      inputs:
+        - item: main.rawcopper
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 40
+            unit: ml
+      outputs:
+        - item: main.processedcopper
+          quantity: 1
+  main.bundleofwires:
+    - int: 10
+      category: materials
+      inputs:
+        - item: main.processedcopper
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 3
+      outputs:
+        - item: main.bundleofwires
+          quantity: 6
+  other.antivenom:
+    - int: 10
+      category: medicine
+      inputs:
+        - item: main.venomgland
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 5
+            unit: ml
+        - liquid_quality: blood
+          amount:
+            value: 25
+            unit: ml
+        - liquid_quality: disinfectant
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - liquid: other.antivenom
+          amount:
+            value: 50
+            unit: ml
+  main.casing:
+    - int: 10
+      category: materials
+      inputs:
+        - item: main.scrappanel
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.casing
+          quantity: 5
+  main.dynamite:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.flammablepowder
+          quantity: 2
+        - item: main.string
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.dynamite
+          quantity: 1
+  main.flashlight:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.lightbulb
+          quantity: 1
+        - item: main.scraptube
+          quantity: 1
+        - item: main.flexiglass
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.flashlight
+          quantity: 1
+  main.lantern:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.emissivecrystalshard
+          quantity: 1
+        - item: main.flexiglass
+          quantity: 1
+        - item: main.woodpanel
+          quantity: 2
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.lantern
+          quantity: 1
+  main.lockpickingkit:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.scrappanel
+          quantity: 1
+        - item: main.scraptube
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: hammering
+          amount: 0.2
+          consume: false
+        - quality: cutting
+          amount: 0.2
+          consume: false
+      outputs:
+        - item: main.lockpickingkit
+          quantity: 1
+          condition: 0.1
+  main.materialpouch:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.rope
+          quantity: 1
+        - item: main.string
+          quantity: 2
+        - item: main.woodpanel
+          quantity: 3
+        - quality: nails
+          amount: 1
+          consume: false
+        - item: main.canvas
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.materialpouch
+          quantity: 1
+  main.belt:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.rope
+          quantity: 2
+        - item: main.string
+          quantity: 2
+        - item: main.woodpanel
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.belt
+          quantity: 1
+          condition: 0.5
+  main.clottingmush:
+    - int: 10
+      category: medicine
+      inputs:
+        - liquid_quality: blood
+          amount:
+            value: 50
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - item: main.flammablepowder
+          quantity: 1
+      outputs:
+        - item: main.clottingmush
+          quantity: 1
+  other.naltrexone:
+    - int: 10
+      category: medicine
+      inputs:
+        - item: main.digestioncrystalshard
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - liquid_quality: opiate
+          amount:
+            value: 50
+            unit: ml
+      outputs:
+        - liquid: other.naltrexone
+          amount:
+            value: 200
+            unit: ml
+  other.antidepressants:
+    - int: 10
+      category: medicine
+      inputs:
+        - item: main.soothingcrystalshard
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - item: main.flammablepowder
+          quantity: 1
+      outputs:
+        - liquid: other.antidepressants
+          amount:
+            value: 200
+            unit: ml
+  main.bruisekit:
+    - int: 10
+      category: medicine
+      inputs:
+        - quality: dressing
+          amount: 1
+          condition:
+            min: 0.5
+        - liquid_quality: opiate
+          amount:
+            value: 25
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+      outputs:
+        - item: main.bruisekit
+          quantity: 1
+  main.makeshiftlrd:
+    - int: 10
+      category: medicine
+      inputs:
+        - item: main.scrappanel
+          quantity: 2
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.scraptube
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.makeshiftlrd
+          quantity: 1
+  main.scarf:
+    - int: 10
+      category: utilities
+      inputs:
+        - item: main.canvas
+          quantity: 5
+        - item: main.string
+          quantity: 3
+      outputs:
+        - item: main.scarf
+          quantity: 1
+  other.fentanyl:
+    - int: 11
+      category: medicine
+      inputs:
+        - liquid: other.morphine
+          amount:
+            value: 50
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 25
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 25
+            unit: ml
+        - item: main.flammablepowder
+          quantity: 1
+      outputs:
+        - liquid: other.fentanyl
+          amount:
+            value: 10
+            unit: ml
+  main.smallbattery:
+    - int: 11
+      category: utilities
+      inputs:
+        - item: main.processedcopper
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.smallbattery
+          quantity: 2
+  main.lcdscreen:
+    - int: 11
+      category: materials
+      inputs:
+        - item: main.flexiglass
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.lcdscreen
+          quantity: 1
+  main.lightbulb:
+    - int: 11
+      category: utilities
+      inputs:
+        - item: main.flexiglass
+          quantity: 2
+        - item: main.scrapcube
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - item: main.bundleofwires
+          quantity: 2
+      outputs:
+        - item: main.lightbulb
+          quantity: 1
+  main.geigercounter:
+    - int: 11
+      category: utilities
+      inputs:
+        - item: main.scrappanel
+          quantity: 2
+        - item: main.scrapcube
+          quantity: 1
+          condition:
+            min: 0.9
+        - item: main.lcdscreen
+          quantity: 1
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.geigercounter
+          quantity: 1
+  main.duffelbag:
+    - int: 11
+      category: utilities
+      inputs:
+        - item: main.brokenbag
+          quantity: 1
+        - item: main.rope
+          quantity: 1
+        - item: main.string
+          quantity: 2
+        - item: main.woodpanel
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.duffelbag
+          quantity: 1
+  main.saline:
+    - int: 11
+      category: medicine
+      inputs:
+        - item: main.plasticchunk
+          quantity: 2
+        - item: main.flexiglass
+          quantity: 2
+        - item: main.scraptube
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+      outputs:
+        - item: main.saline
+          quantity: 1
+  other.lrdserum:
+    - int: 11
+      category: medicine
+      inputs:
+        - liquid_quality: disinfectant
+          amount:
+            value: 25
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 50
+            unit: ml
+        - liquid_quality: opiate
+          amount:
+            value: 25
+            unit: ml
+        - liquid_quality: blood
+          amount:
+            value: 25
+            unit: ml
+        - liquid: other.biochem
+          amount:
+            value: 25
+            unit: ml
+      outputs:
+        - liquid: other.lrdserum
+          amount:
+            value: 25
+            unit: ml
+  main.foliage:
+    - int: 12
+      category: materials
+      inputs:
+        - item: main.funguschunk
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 1
+            unit: ml
+      outputs:
+        - item: main.foliage
+          quantity: 1
+  main.wrench:
+    - int: 12
+      category: tools
+      inputs:
+        - item: main.makeshiftwrench
+          quantity: 1
+        - item: main.scraptube
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.wrench
+          quantity: 1
+  main.machete:
+    - int: 12
+      category: tools
+      inputs:
+        - item: main.crudecleaver
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 3
+        - liquid: other.biochem
+          amount:
+            value: 30
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.machete
+          quantity: 1
+  main.9mmround:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.casing
+          quantity: 5
+        - item: main.flammablepowder
+          quantity: 1
+        - quality: hammering
+          amount: 0.5
+          consume: false
+      outputs:
+        - item: main.9mmround
+          quantity: 5
+  main.556round:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.casing
+          quantity: 4
+        - item: main.flammablepowder
+          quantity: 1
+        - quality: hammering
+          amount: 0.5
+          consume: false
+      outputs:
+        - item: main.556round
+          quantity: 4
+  main.12gauge:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.casing
+          quantity: 3
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.flammablepowder
+          quantity: 1
+        - quality: hammering
+          amount: 0.5
+          consume: false
+      outputs:
+        - item: main.12gauge
+          quantity: 3
+  main.magazinebase:
+    - int: 12
+      category: materials
+      inputs:
+        - item: main.scrappanel
+          quantity: 2
+        - quality: nails
+          amount: 1
+          consume: false
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.magazinebase
+          quantity: 1
+  main.smallmagazine:
+    - int: 12
+      category: tools
+      inputs:
+        - item: main.magazinebase
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.smallmagazine
+          quantity: 1
+  main.riflemagazine:
+    - int: 12
+      category: tools
+      inputs:
+        - item: main.magazinebase
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.riflemagazine
+          quantity: 1
+  main.mediumbattery:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.smallbattery
+          quantity: 2
+        - item: main.scrappanel
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.mediumbattery
+          quantity: 1
+  main.makeshiftrifle:
+    - int: 12
+      category: tools
+      inputs:
+        - item: main.magazinebase
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - item: main.scrappanel
+          quantity: 2
+        - item: main.scraptube
+          quantity: 2
+        - item: main.string
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.makeshiftrifle
+          quantity: 1
+  main.terrainscanner:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.scrappanel
+          quantity: 3
+        - item: main.scraptube
+          quantity: 1
+        - item: main.lcdscreen
+          quantity: 1
+        - quality: nails
+          amount: 1
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.terrainscanner
+          quantity: 1
+  main.scubadivinggear:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.oxygencrystalshard
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 2
+        - item: main.scraptube
+          quantity: 2
+        - item: main.flexiglass
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - item: main.bundleofwires
+          quantity: 1
+        - quality: hammering
+          amount: 1
+          consume: false
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.scubadivinggear
+          quantity: 1
+  main.pickaxe:
+    - int: 12
+      category: tools
+      inputs:
+        - item: main.makeshiftdiggingtool
+          quantity: 1
+        - item: main.scraptube
+          quantity: 2
+        - item: main.scrappanel
+          quantity: 1
+        - quality: nails
+          amount: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.pickaxe
+          quantity: 1
+  main.autoinjector:
+    - int: 12
+      category: materials
+      inputs:
+        - item: main.scraptube
+          quantity: 1
+        - item: main.flexiglass
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.autoinjector
+          quantity: 1
+  main.chestdrain:
+    - int: 12
+      category: utilities
+      inputs:
+        - item: main.autoinjector
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.flexiglass
+          quantity: 2
+        - item: main.scraptube
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.chestdrain
+          quantity: 1
+  main.bloodbag:
+    - int: 12
+      category: medicine
+      inputs:
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.flexiglass
+          quantity: 2
+        - item: main.bundleofwires
+          quantity: 1
+        - item: main.autoinjector
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+      outputs:
+        - item: main.bloodbag
+          quantity: 1
+  main.largebattery:
+    - int: 13
+      category: utilities
+      inputs:
+        - item: main.mediumbattery
+          quantity: 1
+        - item: main.processedcopper
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+      outputs:
+        - item: main.largebattery
+          quantity: 1
+  main.bikehelmet:
+    - int: 13
+      category: utilities
+      inputs:
+        - item: main.makeshifthelmet
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 4
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.bikehelmet
+          quantity: 1
+  main.bigpack:
+    - int: 13
+      category: utilities
+      inputs:
+        - item: main.rope
+          quantity: 2
+        - item: main.woodpanel
+          quantity: 1
+        - item: main.canvas
+          quantity: 5
+        - item: main.string
+          quantity: 3
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.bigpack
+          quantity: 1
+  main.scaffoldingpack:
+    - int: 14
+      category: utilities
+      inputs:
+        - item: main.titaniumslab
+          quantity: 2
+        - item: main.rope
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+      outputs:
+        - item: main.scaffoldingpack
+          quantity: 1
+  main.handcrank:
+    - int: 14
+      category: utilities
+      inputs:
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - item: main.titaniumsheet
+          quantity: 2
+        - item: main.processedcopper
+          quantity: 1
+        - item: main.bundleofwires
+          quantity: 2
+        - item: main.scraptube
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.handcrank
+          quantity: 1
+  main.plasticbandage:
+    - int: 14
+      category: medicine
+      inputs:
+        - quality: dressing
+          amount: 1
+          condition:
+            min: 0.5
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - item: main.titaniumsheet
+          quantity: 1
+      outputs:
+        - item: main.plasticbandage
+          quantity: 1
+  main.boneweldingtool:
+    - int: 14
+      category: medicine
+      inputs:
+        - item: main.scrappanel
+          quantity: 3
+        - item: main.bundleofwires
+          quantity: 2
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - liquid: other.lrdserum
+          amount:
+            value: 10
+            unit: ml
+      outputs:
+        - item: main.boneweldingtool
+          quantity: 1
+  other.procoagulant:
+    - int: 14
+      category: medicine
+      inputs:
+        - item: main.clottingmush
+          quantity: 1
+        - liquid_quality: blood
+          amount:
+            value: 50
+            unit: ml
+        - item: main.bunchunk
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 25
+            unit: ml
+      outputs:
+        - liquid: other.procoagulant
+          amount:
+            value: 100
+            unit: ml
+  main.icepack:
+    - int: 14
+      category: medicine
+      inputs:
+        - item: main.frigiantfruit
+          quantity: 2
+          condition:
+            min: 0.5
+        - liquid_quality: water
+          amount:
+            value: 200
+            unit: ml
+        - item: main.canvas
+          quantity: 2
+        - item: main.string
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+      outputs:
+        - item: main.icepack
+          quantity: 1
+  main.titaniumslab:
+    - int: 15
+      category: materials
+      inputs:
+        - item: main.ilmenitechunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 50
+            unit: ml
+        - liquid_quality: water
+          amount:
+            value: 100
+            unit: ml
+        - quality: hammering
+          amount: 4
+          consume: false
+        - quality: cutting
+          amount: 4
+          consume: false
+      outputs:
+        - item: main.titaniumslab
+          quantity: 1
+  main.titaniumsheet:
+    - int: 15
+      category: materials
+      inputs:
+        - item: main.titaniumslab
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: cutting
+          amount: 4
+          consume: false
+      outputs:
+        - item: main.titaniumsheet
+          quantity: 5
+  main.titaniumrod:
+    - int: 15
+      category: materials
+      inputs:
+        - item: main.titaniumslab
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 10
+            unit: ml
+        - quality: cutting
+          amount: 4
+          consume: false
+      outputs:
+        - item: main.titaniumrod
+          quantity: 2
+  main.tacticalgloves:
+    - int: 15
+      category: utilities
+      inputs:
+        - item: main.titaniumsheet
+          quantity: 1
+        - item: main.scrappanel
+          quantity: 2
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.string
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.tacticalgloves
+          quantity: 1
+  main.traumarig:
+    - int: 15
+      category: utilities
+      inputs:
+        - item: main.belt
+          quantity: 1
+        - item: main.titaniumsheet
+          quantity: 2
+        - item: main.string
+          quantity: 3
+        - item: main.plasticchunk
+          quantity: 3
+        - liquid: other.biochem
+          amount:
+            value: 30
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.traumarig
+          quantity: 1
+  main.lrd:
+    - int: 15
+      category: medicine
+      inputs:
+        - item: main.makeshiftlrd
+          quantity: 1
+        - item: main.titaniumsheet
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 25
+            unit: ml
+        - item: main.autoinjector
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - item: main.bundleofwires
+          quantity: 1
+        - quality: cutting
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.lrd
+          quantity: 1
+  main.minilaserdrill:
+    - int: 16
+      category: tools
+      inputs:
+        - item: main.titaniumsheet
+          quantity: 3
+        - item: main.flexiglass
+          quantity: 2
+        - item: main.bundleofwires
+          quantity: 2
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+        - item: main.flashlight
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - quality: nails
+          amount: 1
+          consume: false
+        - quality: cutting
+          amount: 1
+          consume: false
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.minilaserdrill
+          quantity: 1
+  main.tacticalboots:
+    - int: 16
+      category: utilities
+      inputs:
+        - item: main.titaniumsheet
+          quantity: 2
+        - item: main.plasticchunk
+          quantity: 2
+        - item: main.string
+          quantity: 2
+        - liquid: other.biochem
+          amount:
+            value: 30
+            unit: ml
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.tacticalboots
+          quantity: 1
+  main.titaniumpickaxe:
+    - int: 16
+      category: tools
+      inputs:
+        - item: main.pickaxe
+          quantity: 1
+        - item: main.titaniumrod
+          quantity: 2
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.titaniumpickaxe
+          quantity: 1
+  main.titaniummachete:
+    - int: 16
+      category: tools
+      inputs:
+        - item: main.machete
+          quantity: 1
+        - item: main.titaniumsheet
+          quantity: 2
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.titaniummachete
+          quantity: 1
+  main.titaniummultitool:
+    - int: 16
+      category: tools
+      inputs:
+        - item: main.titaniumsheet
+          quantity: 1
+        - item: main.titaniumrod
+          quantity: 1
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 20
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+        - quality: cutting
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.titaniummultitool
+          quantity: 1
+  main.riothelmet:
+    - int: 17
+      category: utilities
+      inputs:
+        - item: main.bikehelmet
+          quantity: 1
+        - item: main.titaniumsheet
+          quantity: 3
+        - item: main.flexiglass
+          quantity: 2
+        - item: main.plasticchunk
+          quantity: 1
+        - liquid: other.biochem
+          amount:
+            value: 40
+            unit: ml
+        - quality: hammering
+          amount: 1
+          consume: false
+      outputs:
+        - item: main.riothelmet
+          quantity: 1
+  main.neuralbooster:
+    - int: 18
+      category: medicine
+      inputs:
+        - liquid: other.biochem
+          amount:
+            value: 50
+            unit: ml
+        - liquid: other.braingrow
+          amount:
+            value: 80
+            unit: ml
+        - liquid: other.mindwipe
+          amount:
+            value: 30
+            unit: ml
+        - item: main.plasticchunk
+          quantity: 1
+        - item: main.circuitboard
+          quantity: 1
+          condition:
+            min: 0.9
+      outputs:
+        - item: main.neuralbooster
+          quantity: 1

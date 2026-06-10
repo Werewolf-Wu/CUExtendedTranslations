@@ -1,0 +1,2113 @@
+schema_version: 19
+items:
+  main.alcohol:
+    container:
+      capacity: 400
+      weight:
+        empty: 0.1
+        full: 1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.alcohol
+          amount:
+            value: 400
+            unit: ml
+  main.alginate:
+    per_cycle_treatment:
+      condition:
+        cost: 0.07
+      effects:
+        bleeding_control:
+          add: 4.83
+        disinfect_duration:
+          add: 53.33
+          unit: second
+        pain:
+          add: -5.33
+        skin_heal:
+          add: 8.33
+      cycle: true
+  main.amiodarone:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 50
+            unit: ml
+      default_contents:
+        - liquid: other.amiodarone
+          amount:
+            value: 100
+            unit: ml
+  main.analgesicgauze:
+    per_cycle_treatment:
+      condition:
+        cost: 0.07
+      effects:
+        bleeding_control:
+          add: 3.33
+        opiate:
+          add: 1.87
+        pain:
+          add: -20
+        skin_heal:
+          add: 1.33
+      cycle: true
+  main.animalflesh:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.34
+            unit: kg
+          hunger:
+            add: 7.5
+          mood:
+            add: -0.75
+          sickness:
+            add: 4
+            unit: percent
+  main.antibiotics:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 20
+            unit: ml
+      default_contents:
+        - liquid: other.antibiotics
+          amount:
+            value: 100
+            unit: ml
+  main.antidepressants:
+    container:
+      capacity: 140
+      weight:
+        empty: 0.1
+        full: 0.5
+      uses:
+        - method: drink
+          amount:
+            value: 20
+            unit: ml
+      default_contents:
+        - liquid: other.antidepressants
+          amount:
+            value: 140
+            unit: ml
+  main.antirad:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 20
+            unit: ml
+      default_contents:
+        - liquid: other.antirad
+          amount:
+            value: 100
+            unit: ml
+  main.antiserum:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: inject
+          amount:
+            value: 50
+            unit: ml
+      default_contents:
+        - liquid: other.antiserum
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+  main.applejuice:
+    container:
+      capacity: 800
+      weight:
+        empty: 0.1
+        full: 1.65
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.applejuice
+          amount:
+            value: 800
+            unit: ml
+  main.aquapple:
+    use:
+      eat:
+        effects:
+          mood:
+            add: -1
+          thirst:
+            add: 7
+  main.banana:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.03
+            unit: kg
+          hunger:
+            add: 9
+          mood:
+            add: 1
+          radiation_sickness:
+            add: 1
+          thirst:
+            add: 4
+  main.bandage:
+    per_cycle_treatment:
+      condition:
+        cost: 0.08
+      effects:
+        bleeding_control:
+          add: 3.75
+        dislocation_timer:
+          add: -1.67
+          unit: second
+        fracture_timer:
+          add: -1.67
+          unit: second
+        pain:
+          add: -5
+        skin_heal:
+          add: 2.5
+      cycle: true
+  main.bleach:
+    container:
+      capacity: 1500
+      weight:
+        empty: 0.1
+        full: 3
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.bleach
+          amount:
+            value: 1500
+            unit: ml
+  main.blobflesh:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.2
+            unit: kg
+          hunger:
+            add: 6
+          mood:
+            add: 1
+          sickness:
+            add: 5
+            unit: percent
+  main.bloodbag:
+    container:
+      capacity: 750
+      weight:
+        empty: 0.1
+        full: 1.25
+      uses:
+        - method: inject
+          amount:
+            value: 375
+            unit: ml
+      default_contents:
+        - liquid: other.blood
+          amount:
+            value: 750
+            unit: ml
+      auto_fill: false
+  main.bloodbaghuman:
+    container:
+      capacity: 750
+      weight:
+        empty: 0.1
+        full: 1.25
+      uses:
+        - method: inject
+          amount:
+            value: 375
+            unit: ml
+      default_contents:
+        - liquid: other.redblood
+          amount:
+            value: 750
+            unit: ml
+      auto_fill: false
+  main.bloodcoagulant:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: inject
+          amount:
+            value: 33.334
+            unit: ml
+      default_contents:
+        - liquid: other.procoagulant
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+  main.bloodsac:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.34
+            unit: kg
+          hunger:
+            add: 7
+          mood:
+            add: -1
+          sickness:
+            add: 15
+            unit: percent
+          thirst:
+            add: 7.5
+  main.bowlofcereal:
+    container:
+      capacity: 500
+      weight:
+        empty: 0.1
+        full: 1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.cereal
+          amount:
+            value: 500
+            unit: ml
+  main.braingrow:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.5
+      uses:
+        - method: drink
+          amount:
+            value: 20
+            unit: ml
+      default_contents:
+        - liquid: other.braingrow
+          amount:
+            value: 100
+            unit: ml
+  main.bread:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.17
+            unit: kg
+          hunger:
+            add: 9
+          thirst:
+            add: 2
+  main.browncap:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          hunger:
+            add: 7
+          stroke:
+            add: 0.1
+        random_effects:
+          - effect: body_temperature
+            chance: 0.08
+            add: 4.5
+          - effect: body_weight
+            chance: 0.2
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          - effect: body_weight
+            chance: 0.35
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          - effect: body_weight
+            chance: 0.55
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          - effect: body_weight
+            chance: 0.65
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          - effect: body_weight
+            chance: 0.75
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          - effect: body_weight
+            chance: 0.996
+            add_range:
+              min: -0.17
+              max: 0.34
+            unit: kg
+          - effect: energy
+            chance: 0.996
+            add: 50
+          - effect: hunger
+            chance: 0.2
+            add: 10
+          - effect: hunger
+            chance: 0.35
+            add: 10
+          - effect: hunger
+            chance: 0.55
+            add: 10
+          - effect: hunger
+            chance: 0.65
+            add: 7
+          - effect: hunger
+            chance: 0.75
+            add: 7
+          - effect: hunger
+            chance: 0.996
+            add: 7
+          - effect: infection_resistance
+            chance: 0.55
+            add: 500
+            unit: second
+          - effect: mood
+            chance: 0.35
+            add: 2.5
+          - effect: mood
+            chance: 0.55
+            add: -2.5
+          - effect: mood
+            chance: 0.996
+            add: -1
+          - effect: opiate
+            chance: 0.75
+            add: 35
+          - effect: radiation_sickness
+            chance: 0.05
+            add: 15
+          - effect: sickness
+            chance: 0.55
+            add_range:
+              min: 0
+              max: 50
+            unit: percent
+          - effect: thirst
+            chance: 0.1
+            add: 0
+          - effect: vomiting
+            chance: 0.65
+            present: true
+  main.bruisekit:
+    per_cycle_treatment:
+      condition:
+        cost: 0.1
+      effects:
+        dislocation_timer:
+          add: -8
+          unit: second
+        muscle_health:
+          add: 1
+          unit: per_second
+          duration:
+            value: 14
+            unit: second
+        pain:
+          add: -8
+        skin_heal:
+          add: 10
+      cycle: true
+  main.bucketofchicken:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.68
+            unit: kg
+          hunger:
+            add: 10
+          mood:
+            add: 1.5
+  main.bulbskin:
+    use:
+      eat:
+        effects:
+          adrenaline:
+            add: 100
+          thirst:
+            add: 4.5
+        random_effects:
+          - effect: brain_health
+            chance: 0.5
+            add_range:
+              min: -0.7
+              max: -0.25
+  main.bunchunk:
+    use:
+      eat:
+        effects:
+          blood_viscosity:
+            add: 10
+          mood:
+            add: -1
+          sepsis:
+            add: 15
+          sickness:
+            add: 10
+            unit: percent
+  main.burger:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.41
+            unit: kg
+          hunger:
+            add: 14
+          mood:
+            add: 1.5
+  main.cactusflesh:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.2
+            unit: kg
+          hunger:
+            add: 4
+          mood:
+            add: 1
+          pain:
+            add: 10
+          thirst:
+            add: 4
+  main.cake:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.43
+            unit: kg
+          hunger:
+            add: 8
+          mood:
+            add: 0.8
+  main.candybar:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.27
+            unit: kg
+          hunger:
+            add: 6
+          mood:
+            add: 2.5
+          sickness:
+            add: 5
+            unit: percent
+  main.canteen:
+    container:
+      capacity: 300
+      weight:
+        empty: 0.6
+        full: 0.6
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents: []
+  main.ceftriaxone:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      default_contents:
+        - liquid: other.ceftriaxone
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+  main.cereal:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.15
+            unit: kg
+          hunger:
+            add: 6
+          thirst:
+            add: -2.5
+  main.chips:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.31
+            unit: kg
+          hunger:
+            add: 3
+          mood:
+            add: 0.7
+          sickness:
+            add: 3
+            unit: percent
+  main.chocolatebar:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.27
+            unit: kg
+          hunger:
+            add: 7
+          mood:
+            add: 2.5
+          sickness:
+            add: 20
+            unit: percent
+  main.chocolatemilk:
+    container:
+      capacity: 1000
+      weight:
+        empty: 0.1
+        full: 1.6
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.chocolatemilk
+          amount:
+            value: 1000
+            unit: ml
+  main.claws:
+    attack:
+      condition:
+        cost: 0.14
+        unit: percent_per_use
+      structure_damage: 24
+      structure_cooldown: 0.15
+      biological_damage: 35
+      attack_cooldown: 0.14
+      range: 5
+      stamina_cost: 0.5
+  main.coffee:
+    container:
+      capacity: 250
+      weight:
+        empty: 0.1
+        full: 0.5
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.coffee
+          amount:
+            value: 250
+            unit: ml
+  main.combatpen:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.15
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.highgradestimulant
+          amount:
+            value: 60
+            unit: ml
+        - liquid: other.epinephrine
+          amount:
+            value: 15
+            unit: ml
+        - liquid: other.oxyline
+          amount:
+            value: 25
+            unit: ml
+      auto_fill: false
+  main.cookies:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.24
+            unit: kg
+          hunger:
+            add: 3
+          mood:
+            add: 0.85
+          sickness:
+            add: 3
+            unit: percent
+  main.craftingbottle:
+    container:
+      capacity: 1000
+      weight:
+        empty: 0.1
+        full: 1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents: []
+      auto_fill: false
+  main.crudecleaver:
+    attack:
+      condition:
+        cost: 0.4
+        unit: percent_per_use
+      structure_damage: 20
+      structure_cooldown: 0.35
+      biological_damage: 25
+      attack_cooldown: 0.23
+      range: 5
+      stamina_cost: 0.5
+  main.disinfectant:
+    container:
+      capacity: 200
+      weight:
+        empty: 0.1
+        full: 0.5
+      uses:
+        - method: apply
+          amount:
+            value: 10
+            unit: ml
+      default_contents:
+        - liquid: other.disinfectant
+          amount:
+            value: 200
+            unit: ml
+      auto_fill: false
+  main.dogfood:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.14
+            unit: kg
+          hunger:
+            add: 6
+  main.dryfoliage:
+    use:
+      eat:
+        effects:
+          hunger:
+            add: 6
+          mood:
+            add: -1
+        random_effects:
+          - effect: sickness
+            chance: 0.33
+            add_range:
+              min: 5
+              max: 20
+            unit: percent
+  main.energydrink:
+    container:
+      capacity: 250
+      weight:
+        empty: 0.1
+        full: 0.75
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.energydrink
+          amount:
+            value: 250
+            unit: ml
+  main.experimentflesh:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.51
+            unit: kg
+          hunger:
+            add: 12.5
+          mood:
+            add: -6
+          sickness:
+            add: 16
+            unit: percent
+  main.exposedcore:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.34
+            unit: kg
+          caffeine:
+            add: 90
+          energy:
+            add: 10
+          hunger:
+            add: 12
+          mood:
+            add: 1
+          stimulant_multiplier:
+            add: 0.35
+          thirst:
+            add: 15
+  main.fentanyl:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      default_contents:
+        - liquid: other.water
+          amount:
+            value: 90
+            unit: ml
+        - liquid: other.fentanyl
+          amount:
+            value: 10
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+  main.fleshchunk:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.41
+            unit: kg
+          hunger:
+            add: 14
+          mood:
+            add: -0.1
+  main.flimsyknife:
+    attack:
+      condition:
+        cost: 1
+        unit: percent_per_use
+      structure_damage: 16
+      structure_cooldown: 0.2
+      biological_damage: 16
+      attack_cooldown: 0.15
+      range: 5
+      stamina_cost: 0.4
+  main.foliage:
+    use:
+      eat:
+        effects:
+          hunger:
+            add: 5
+          mood:
+            add: -2
+        random_effects:
+          - effect: sickness
+            chance: 0.66
+            add_range:
+              min: 10
+              max: 30
+            unit: percent
+  main.foliagemeal:
+    use:
+      eat:
+        effects:
+          hunger:
+            add: 18
+          sickness:
+            add: 3
+            unit: percent
+          thirst:
+            add: 2
+  main.frigiantfruit:
+    use:
+      eat:
+        effects:
+          body_temperature:
+            add: -2.5
+          body_weight:
+            add: 0.02
+            unit: kg
+          cold:
+            add: 20
+          hunger:
+            add: 2.5
+          mood:
+            add: 0.5
+          thirst:
+            add: 3.5
+  main.funguschunk:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.09
+            unit: kg
+          hunger:
+            add: 10
+        random_effects:
+          - effect: adrenaline
+            chance: 0.05
+            add: 100
+          - effect: blood_oxygen
+            chance: 0.03
+            add: -20
+          - effect: blood_viscosity
+            chance: 0.025
+            add: 0
+          - effect: blood_volume
+            chance: 0.02
+            add: 0
+          - effect: body_temperature
+            chance: 0.08
+            add: 0
+          - effect: body_weight
+            chance: 0.05
+            add: 0
+            unit: kg
+          - effect: brain_health
+            chance: 0.01
+            add: 1
+          - effect: caffeine
+            chance: 0.04
+            add: 300
+          - effect: caffeine
+            chance: 0.03
+            add: 120
+          - effect: consciousness
+            chance: 0.1
+            add: -50
+          - effect: dirtiness
+            chance: 0.03
+            add: 0
+          - effect: energy
+            chance: 0.035
+            add: 100
+          - effect: hunger
+            chance: 0.035
+            add_range:
+              min: -30
+              max: 30
+          - effect: infection_resistance
+            chance: 0.04
+            add: 240
+            unit: second
+          - effect: mood
+            chance: 0.1
+            add: 1
+          - effect: opiate
+            chance: 0.03
+            add: 30
+          - effect: opiate_antagonism
+            chance: 0.03
+            add: 30
+          - effect: pain
+            chance: 0.025
+            add: 60
+          - effect: radiation_sickness
+            chance: 0.05
+            add: 0
+          - effect: sepsis
+            chance: 0.03
+            add: 10
+          - effect: shock
+            chance: 0.05
+            add: 5
+          - effect: sickness
+            chance: 0.05
+            add: 0
+            unit: percent
+          - effect: stamina
+            chance: 0.05
+            add: -40
+          - effect: stamina
+            chance: 0.1
+            add: 40
+          - effect: thirst
+            chance: 0.05
+            add: 0
+          - effect: vomit_blood
+            chance: 0.015
+            present: true
+          - effect: vomiting
+            chance: 0.015
+            present: true
+  main.geofruit:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.03
+            unit: kg
+          hunger:
+            add: 3.5
+          mood:
+            add: 0.5
+          thirst:
+            add: 5
+  main.hardcandy:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.24
+            unit: kg
+          hunger:
+            add: 1
+          mood:
+            add: 1
+          sickness:
+            add: 3
+            unit: percent
+  main.heavydrill:
+    attack:
+      condition:
+        cost: 0.24
+        unit: percent_per_use
+      structure_damage: 60
+      structure_cooldown: 0.16
+      biological_damage: 50
+      attack_cooldown: 0.06
+      range: 4
+      stamina_cost: 0
+  main.helluce:
+    use:
+      eat:
+        effects:
+          body_temperature:
+            add: 2
+          caffeine:
+            add: 30
+          hearing_loss:
+            add: -8
+          sickness:
+            add: -11
+            unit: percent
+  main.heroin:
+    container:
+      capacity: 150
+      weight:
+        empty: 0.1
+        full: 0.3
+      default_contents:
+        - liquid: other.heroin
+          amount:
+            value: 100
+            unit: ml
+        - liquid: other.water
+          amount:
+            value: 50
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 150
+            unit: ml
+  main.icetea:
+    container:
+      capacity: 500
+      weight:
+        empty: 0.1
+        full: 1.25
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.icetea
+          amount:
+            value: 500
+            unit: ml
+  main.internalorgans:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 1.02
+            unit: kg
+          hunger:
+            add: 15
+          mood:
+            add: -18
+          sickness:
+            add: 32
+            unit: percent
+  main.keratinbooster:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 50
+            unit: ml
+      default_contents:
+        - liquid: other.keratinbooster
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+  main.ketchup:
+    container:
+      capacity: 300
+      weight:
+        empty: 0.1
+        full: 1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.ketchup
+          amount:
+            value: 300
+            unit: ml
+  main.lemonade:
+    container:
+      capacity: 750
+      weight:
+        empty: 0.1
+        full: 1.65
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.lemonade
+          amount:
+            value: 750
+            unit: ml
+  main.liquidcentrifuge:
+    container:
+      capacity: 1000
+      weight:
+        empty: 0.9
+        full: 0.9
+      default_contents: []
+      auto_fill: false
+  main.liquidpouch:
+    container:
+      capacity: 1000
+      weight:
+        empty: 0.1
+        full: 1.6
+      default_contents: []
+      auto_fill: false
+  main.lrd:
+    container:
+      capacity: 75
+      weight:
+        empty: 0.1
+        full: 0.6
+      default_contents:
+        - liquid: other.lrdserum
+          amount:
+            value: 75
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          liquid: other.lrdserum
+          amount:
+            value: 25
+            unit: ml
+  main.machete:
+    attack:
+      condition:
+        cost: 0.26
+        unit: percent_per_use
+      structure_damage: 38
+      structure_cooldown: 0.35
+      biological_damage: 50
+      attack_cooldown: 0.23
+      range: 5.75
+      stamina_cost: 0.75
+  main.makeshiftdiggingtool:
+    attack:
+      condition:
+        cost: 0.25
+        unit: percent_per_use
+      structure_damage: 65
+      structure_cooldown: 0.4
+      biological_damage: 32
+      attack_cooldown: 0.33
+      range: 5.2
+      stamina_cost: 1.65
+  main.makeshiftlrd:
+    container:
+      capacity: 50
+      weight:
+        empty: 0.1
+        full: 0.75
+      default_contents:
+        - liquid: other.lrdserum
+          amount:
+            value: 50
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          liquid: other.lrdserum
+          amount:
+            value: 25
+            unit: ml
+  main.makeshiftwrench:
+    attack:
+      condition:
+        cost: 0.33
+        unit: percent_per_use
+      structure_damage: 20
+      structure_cooldown: 0.2
+      biological_damage: 14
+      attack_cooldown: 0.2
+      range: 5
+      stamina_cost: 1
+  main.milk:
+    container:
+      capacity: 1000
+      weight:
+        empty: 0.1
+        full: 1.5
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.milk
+          amount:
+            value: 1000
+            unit: ml
+  main.mindwipe:
+    container:
+      capacity: 60
+      weight:
+        empty: 0.1
+        full: 0.3
+      default_contents:
+        - liquid: other.mindwipe
+          amount:
+            value: 30
+            unit: ml
+        - liquid: other.morphine
+          amount:
+            value: 30
+            unit: ml
+      uses:
+        - method: drink
+          amount:
+            value: 60
+            unit: ml
+  main.minibarrel:
+    container:
+      capacity: 10000
+      weight:
+        empty: 12
+        full: 12
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents: []
+      auto_fill: false
+  main.minilaserdrill:
+    attack:
+      condition:
+        cost: 0.14
+        unit: percent_per_use
+      structure_damage: 25.1
+      structure_cooldown: 0.16
+      biological_damage: 15
+      attack_cooldown: 0.08
+      range: 5.5
+      stamina_cost: 0
+  main.morphine:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      default_contents:
+        - liquid: other.morphine
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+  main.musharm:
+    per_cycle_treatment:
+      condition:
+        cost: 0.4
+      effects:
+        bleeding_control:
+          add: 4
+        skin_heal:
+          add: 3.2
+      cycle: true
+  main.mushpear:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: -0.85
+            unit: kg
+          hunger:
+            add: 5
+          mood:
+            add: -0.8
+          opiate:
+            add: 10
+          sickness:
+            add: 7
+            unit: percent
+          thirst:
+            add: 4
+  main.mushtail:
+    use:
+      eat:
+        effects:
+          consciousness:
+            add: -100
+          energy:
+            add: -100
+          mood:
+            add: 12
+          sleepiness:
+            add: 150
+  main.naloxone:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      default_contents:
+        - liquid: other.naloxone
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+  main.naltrexone:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 20
+            unit: ml
+      default_contents:
+        - liquid: other.naltrexone
+          amount:
+            value: 100
+            unit: ml
+  main.neuralbooster:
+    use:
+      eat:
+        effects:
+          body_temperature:
+            add: 5
+          brain_health:
+            add: -20
+          caffeine:
+            add: 600
+          internal_bleeding:
+            add: 100
+          mood:
+            add: 10
+          shock:
+            add: 20
+          sickness:
+            add: 100
+            unit: percent
+          vomiting:
+            present: true
+  main.nondescriptcan:
+    use:
+      eat: {}
+  main.nutrientbar:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.14
+            unit: kg
+          hunger:
+            add: 12.5
+  main.opium:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.25
+      default_contents:
+        - liquid: other.opium
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+  main.paincream:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.5
+      uses:
+        - method: apply
+          amount:
+            value: 10
+            unit: ml
+      default_contents:
+        - liquid: other.reliefcream
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+  main.painkillers:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 10
+            unit: ml
+      default_contents:
+        - liquid: other.painkillers
+          amount:
+            value: 100
+            unit: ml
+  main.pancake:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.41
+            unit: kg
+          hunger:
+            add: 10
+          mood:
+            add: 1.25
+          sickness:
+            add: 1.5
+            unit: percent
+  main.paprikash:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.17
+            unit: kg
+          hunger:
+            add: 12
+          mood:
+            add: 1
+          sickness:
+            add: 2
+            unit: percent
+  main.pemmican:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.46
+            unit: kg
+          hunger:
+            add: 12
+  main.pickaxe:
+    attack:
+      condition:
+        cost: 0.18
+        unit: percent_per_use
+      structure_damage: 110
+      structure_cooldown: 0.55
+      biological_damage: 60
+      attack_cooldown: 0.36
+      range: 5.2
+      stamina_cost: 1.75
+  main.pitchfork:
+    attack:
+      condition:
+        cost: 0.26
+        unit: percent_per_use
+      structure_damage: 40
+      structure_cooldown: 0.35
+      biological_damage: 50
+      attack_cooldown: 0.25
+      range: 5.88
+      stamina_cost: 0.87
+  main.pizzaslice:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.41
+            unit: kg
+          hunger:
+            add: 12
+          mood:
+            add: 1.5
+  main.plasmacutter:
+    attack:
+      condition:
+        cost: 0.1
+        unit: percent_per_use
+      structure_damage: 10
+      structure_cooldown: 0.1
+      biological_damage: 10
+      attack_cooldown: 0.05
+      range: 5.5
+      stamina_cost: 0
+      multipliers:
+        metal_damage: 10
+  main.plasticbandage:
+    per_cycle_treatment:
+      condition:
+        cost: 0.08
+      effects:
+        bleeding_control:
+          add: 6
+        dislocation_timer:
+          add: -2.5
+          unit: second
+        fracture_timer:
+          add: -2.5
+          unit: second
+        pain:
+          add: -8.33
+        skin_heal:
+          add: 5
+      cycle: true
+  main.popcorn:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.68
+            unit: kg
+          hunger:
+            add: 9
+          mood:
+            add: 1
+  main.popfruit:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.02
+            unit: kg
+          hunger:
+            add: 4
+          mood:
+            add: 0.35
+          radiation_sickness:
+            add_range:
+              min: -7.5
+              max: 7.5
+          thirst:
+            add: 2.5
+  main.primitivediggingtool:
+    attack:
+      condition:
+        cost: 0.17
+        unit: percent_per_use
+      structure_damage: 75
+      structure_cooldown: 0.4
+      biological_damage: 50
+      attack_cooldown: 0.3
+      range: 5.2
+      stamina_cost: 1.65
+  main.rag:
+    per_cycle_treatment:
+      condition:
+        cost: 0.13
+      effects:
+        bleeding_control:
+          add: 1.25
+        dislocation_timer:
+          add: -0.63
+          unit: second
+        fracture_timer:
+          add: -0.63
+          unit: second
+        pain:
+          add: -3.13
+        skin_heal:
+          add: 1
+      cycle: true
+  main.rake:
+    attack:
+      condition:
+        cost: 0.24
+        unit: percent_per_use
+      structure_damage: 35
+      structure_cooldown: 0.35
+      biological_damage: 30
+      attack_cooldown: 0.28
+      range: 5.2
+      stamina_cost: 0.88
+  main.ringersolution:
+    container:
+      capacity: 700
+      weight:
+        empty: 0.1
+        full: 1.1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+        - method: inject
+          amount:
+            value: 80
+            unit: ml
+      default_contents:
+        - liquid: other.ringersolution
+          amount:
+            value: 700
+            unit: ml
+      auto_fill: false
+  main.rippeddressing:
+    per_cycle_treatment:
+      condition:
+        cost: 0.13
+      effects:
+        bleeding_control:
+          add: 2.25
+        dislocation_timer:
+          add: -0.63
+          unit: second
+        fracture_timer:
+          add: -0.63
+          unit: second
+        pain:
+          add: -5
+        skin_heal:
+          add: 1
+      cycle: true
+  main.saline:
+    container:
+      capacity: 750
+      weight:
+        empty: 0.1
+        full: 1.1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+        - method: inject
+          amount:
+            value: 80
+            unit: ml
+      default_contents:
+        - liquid: other.saline
+          amount:
+            value: 750
+            unit: ml
+      auto_fill: false
+  main.shovel:
+    attack:
+      condition:
+        cost: 0.18
+        unit: percent_per_use
+      structure_damage: 45
+      structure_cooldown: 0.26
+      biological_damage: 27
+      attack_cooldown: 0.21
+      range: 5.7
+      stamina_cost: 1
+  main.sickle:
+    attack:
+      condition:
+        cost: 0.26
+        unit: percent_per_use
+      structure_damage: 35
+      structure_cooldown: 0.3
+      biological_damage: 40
+      attack_cooldown: 0.23
+      range: 5.2
+      stamina_cost: 0.7
+  main.sledgehammer:
+    attack:
+      condition:
+        cost: 0.13
+        unit: percent_per_use
+      structure_damage: 90
+      structure_cooldown: 0.66
+      biological_damage: 60
+      attack_cooldown: 0.48
+      range: 5.9
+      stamina_cost: 3
+  main.sleepingpills:
+    container:
+      capacity: 25
+      weight:
+        empty: 0.1
+        full: 0.4
+      uses:
+        - method: drink
+          amount:
+            value: 5
+            unit: ml
+      default_contents:
+        - liquid: other.sleepingpills
+          amount:
+            value: 25
+            unit: ml
+  main.sodabottle:
+    container:
+      capacity: 1000
+      weight:
+        empty: 0.1
+        full: 2.3
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.soda
+          amount:
+            value: 1000
+            unit: ml
+  main.sodacan:
+    container:
+      capacity: 250
+      weight:
+        empty: 0.1
+        full: 0.75
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.soda
+          amount:
+            value: 250
+            unit: ml
+  main.sodiumnitroprusside:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 50
+            unit: ml
+      default_contents:
+        - liquid: other.sodiumnitroprusside
+          amount:
+            value: 100
+            unit: ml
+  main.soup:
+    container:
+      capacity: 300
+      weight:
+        empty: 0.1
+        full: 1
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.soup
+          amount:
+            value: 300
+            unit: ml
+  main.spraybottle:
+    container:
+      capacity: 200
+      weight:
+        empty: 0.1
+        full: 0.5
+      uses:
+        - method: apply
+          amount:
+            value: 10
+            unit: ml
+      default_contents: []
+      auto_fill: false
+  main.steak:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.54
+            unit: kg
+          hunger:
+            add: 15
+          mood:
+            add: 2
+  main.sterilizedbandage:
+    per_cycle_treatment:
+      condition:
+        cost: 0.08
+      effects:
+        bleeding_control:
+          add: 3.75
+        disinfect_duration:
+          add: 75
+          unit: second
+        dislocation_timer:
+          add: -1.67
+          unit: second
+        fracture_timer:
+          add: -1.67
+          unit: second
+        pain:
+          add: -5
+        skin_heal:
+          add: 2.5
+      cycle: true
+  main.stonefruitopen:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.1
+            unit: kg
+          hunger:
+            add: 8
+          thirst:
+            add: -5
+  main.streptokinase:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: inject
+          amount:
+            value: 33.334
+            unit: ml
+      default_contents:
+        - liquid: other.streptokinase
+          amount:
+            value: 100
+            unit: ml
+      auto_fill: false
+  main.syringe:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.25
+      default_contents: []
+      auto_fill: false
+      uses:
+        - method: inject
+          amount:
+            value: 100
+            unit: ml
+  main.titaniummachete:
+    attack:
+      condition:
+        cost: 0.03
+        unit: percent_per_use
+      structure_damage: 50
+      structure_cooldown: 0.32
+      biological_damage: 80
+      attack_cooldown: 0.18
+      range: 5.75
+      stamina_cost: 0.7
+  main.titaniummultitool:
+    attack:
+      condition:
+        cost: 0.05
+        unit: percent_per_use
+      structure_damage: 25
+      structure_cooldown: 0.25
+      biological_damage: 20
+      attack_cooldown: 0.22
+      range: 5
+      stamina_cost: 0.6
+  main.titaniumpickaxe:
+    attack:
+      condition:
+        cost: 0.03
+        unit: percent_per_use
+      structure_damage: 140
+      structure_cooldown: 0.48
+      biological_damage: 70
+      attack_cooldown: 0.31
+      range: 5.2
+      stamina_cost: 1.7
+  main.trowel:
+    attack:
+      condition:
+        cost: 0.25
+        unit: percent_per_use
+      structure_damage: 32
+      structure_cooldown: 0.25
+      biological_damage: 16
+      attack_cooldown: 0.22
+      range: 5
+      stamina_cost: 0.6
+  main.vasopressin:
+    container:
+      capacity: 100
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: drink
+          amount:
+            value: 50
+            unit: ml
+      default_contents:
+        - liquid: other.vasopressin
+          amount:
+            value: 100
+            unit: ml
+  main.venomgland:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.07
+            unit: kg
+          hunger:
+            add: 2
+          mood:
+            add: -3
+          sickness:
+            add: 15
+            unit: percent
+          thirst:
+            add: 2
+          toxin:
+            add: 30
+  main.waterbottle:
+    container:
+      capacity: 500
+      weight:
+        empty: 0.1
+        full: 1.25
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.water
+          amount:
+            value: 500
+            unit: ml
+  main.waterjug:
+    container:
+      capacity: 3000
+      weight:
+        empty: 0.1
+        full: 5
+      uses:
+        - method: drink
+          amount:
+            value: 100
+            unit: ml
+      default_contents:
+        - liquid: other.water
+          amount:
+            value: 3000
+            unit: ml
+  main.wooddiggingtool:
+    attack:
+      condition:
+        cost: 0.33
+        unit: percent_per_use
+      structure_damage: 49
+      structure_cooldown: 0.33
+      biological_damage: 38
+      attack_cooldown: 0.26
+      range: 5.2
+      stamina_cost: 1
+  main.woodpickaxe:
+    attack:
+      condition:
+        cost: 0.71
+        unit: percent_per_use
+      structure_damage: 105
+      structure_cooldown: 0.49
+      biological_damage: 55
+      attack_cooldown: 0.37
+      range: 5.2
+      stamina_cost: 1.5
+  main.woodpitchfork:
+    attack:
+      condition:
+        cost: 0.45
+        unit: percent_per_use
+      structure_damage: 35
+      structure_cooldown: 0.32
+      biological_damage: 43
+      attack_cooldown: 0.26
+      range: 5.88
+      stamina_cost: 0.8
+  main.woodshovel:
+    attack:
+      condition:
+        cost: 0.33
+        unit: percent_per_use
+      structure_damage: 40
+      structure_cooldown: 0.25
+      biological_damage: 20
+      attack_cooldown: 0.19
+      range: 5.7
+      stamina_cost: 0.75
+  main.woodsickle:
+    attack:
+      condition:
+        cost: 0.5
+        unit: percent_per_use
+      structure_damage: 32
+      structure_cooldown: 0.3
+      biological_damage: 38
+      attack_cooldown: 0.23
+      range: 5.2
+      stamina_cost: 0.7
+  main.woodtrowel:
+    attack:
+      condition:
+        cost: 0.38
+        unit: percent_per_use
+      structure_damage: 28
+      structure_cooldown: 0.24
+      biological_damage: 15
+      attack_cooldown: 0.21
+      range: 5
+      stamina_cost: 0.5
+  main.woundglue:
+    container:
+      capacity: 80
+      weight:
+        empty: 0.1
+        full: 0.3
+      uses:
+        - method: apply
+          amount:
+            value: 20
+            unit: ml
+      default_contents:
+        - liquid: other.woundglue
+          amount:
+            value: 80
+            unit: ml
+      auto_fill: false
+  main.wrench:
+    attack:
+      condition:
+        cost: 0.13
+        unit: percent_per_use
+      structure_damage: 25
+      structure_cooldown: 0.2
+      biological_damage: 15
+      attack_cooldown: 0.2
+      range: 4.75
+      stamina_cost: 1
+  main.xalorissponge:
+    use:
+      eat:
+        effects:
+          body_weight:
+            add: 0.05
+            unit: kg
+          hunger:
+            add: 8
+          sepsis:
+            add: 5
+          sickness:
+            add: 2
+            unit: percent
