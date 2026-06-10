@@ -1,0 +1,19 @@
+[project]
+name = "cuextendedtranslations"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.16",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["TRY400"]
