@@ -1,5 +1,6 @@
 schema_version: 19
 # We can drink || applyOnLimb, and inject on health panel. 
+# Please notice that for liquids the displayed name is its `locale` value instead of its id. 
 liquids:
   other.water:
     drink:
