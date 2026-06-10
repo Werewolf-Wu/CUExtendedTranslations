@@ -1,14 +1,11 @@
 schema_version: 19
-
 name: "<color=yellow>增强简体中文</color>"
 extra_description: "<color=yellow>基于官方简中翻译，追加机制说明，适用于 Demo7.1 版本</color>"
-
 style:
   color: "#a3a3a3"
   block: "<color={color}>{content}</color>"
   part_separator: " | "
   line_separator: "\n"
-
 order:
   item_description:
     - liquid_container
@@ -17,23 +14,18 @@ order:
     - attack
     - sources
     - recipes
-
   building_description:
     - building_stats
     - building_drops
     - sources
-
   liquid_description:
     - liquid_effects
     - recipes
     - sources
-
   moodle_description:
     - moodle_conditions
-
 modules:
   attack:
-    enabled: true
     template: |
       {structural_damage} | {cooldown}
       {damage} | {attack_cooldown}
@@ -41,7 +33,6 @@ modules:
       {condition_use}
       {metal_more_damage}
       {piercing}
-
     fields:
       structural_damage: "结构 {value}"
       cooldown: "冷却 {value}"
@@ -52,22 +43,16 @@ modules:
       condition_use: "耐久消耗 {value}%/次"
       metal_more_damage: "金属伤害x10"
       piercing: "穿透"
-
   liquid_container:
-    enabled: true
     template: "{weight}{separator}{uses}{separator}{contents}"
-
     fields:
       weight: "容重比：{value}u/100mL"
       drink: "每次饮用{value}mL"
       apply: "每次外敷{value}mL"
       inject: "每次注射{value}mL"
       contents: "初始内容：{value}"
-
   treatment:
-    enabled: true
     template: "每圈 | {condition_use} | {effects}"
-
     fields:
       condition_use: "耐久消耗 {value}"
       skin_heal: "皮肤治疗 {value}"
@@ -75,54 +60,37 @@ modules:
       pain: "疼痛 {value}"
       bone_heal_timer: "骨折计时 -{value}秒"
       dislocation_timer: "脱臼计时 -{value}秒"
-      muscle_heal_time: "肌肉 +1/s ({value}秒)"
+      muscle_heal_time: "肌肉+1({value}秒)"
       opiate: "阿片 {value}"
       disinfection_time: "消毒 {value}秒"
-
   food_effects:
-    enabled: true
     template: "食用效果：{effects}"
-
     fields:
       chance: "{chance} {value}"
       unknown: "随机效果"
-
   liquid_effects:
-    enabled: true
     route_titles:
       drink: "饮用效果({amount}mL)"
       apply: "外敷效果({amount}mL)"
       inject: "注射效果({amount}mL)"
     template: "{routes}"
-
   recipes:
-    enabled: true
     template: "制作({int})：{inputs} = {outputs}"
-
     fields:
       liquid_unit: "mL "
-
   sources:
-    enabled: true
     template: "来源：{sources}"
-
   building_stats:
-    enabled: true
-    template: "最大耐久：{health}"
-
+    template: "最大血量：{health}"
   building_drops:
-    enabled: true
     template: "掉落：{drops}"
-
     fields:
       drop: "{chance} {item}{quantity}{condition}"
       quantity: "x{value}"
       chance: " {value}"
       condition: "({value})"
       random_pool: "随机{amount}个：{items}"
-
   moodle_conditions:
-    enabled: true
     template: "{conditions}"
     comparison: "{field}{op}{value}{unit}"
     range: "{field}{left_op}{left}{unit}-{right_op}{right}{unit}"
